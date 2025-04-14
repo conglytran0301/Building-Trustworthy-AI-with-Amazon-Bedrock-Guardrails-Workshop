@@ -1,0 +1,169 @@
+[
+{
+	"uri": "//localhost:1313/vi/5-cognito/1-create-userpool/",
+	"title": "Khởi tạo Cognito User pool",
+	"tags": [],
+	"description": "",
+	"content": "Khởi tạo Cognito User pool Truy cập vào AWS Management Console\nTìm Cognito Chọn Cognito Trong giao diện Cognito\nChọn Create user pool Trong giao diện Create user pool\nỞ Step 1 Configure sign-in experience\nTìm Cognito user pool sign-in options, chọn User name và Email Chọn Next Ở Step 2 Configure security requirements\nPassword policy mode chọn Cognito defaults Multi-factor authentication chọn No MFA\nSelf-service account recovery chọn Enable self-service account recovery - Recommended\nDelivery method for user account recovery messages chọn Email only\nChọn Next Ở Step 3 Configure sign-up experience\nTất cả để mặc định Chọn Next Ở Step 4 Configure message delivery\nEmail chọn Send email with Cognito FROM email address chọn no-reply@verificationemail.com Chọn Next Ở Step 5 Integrate your app\nUser pool name nhập FCJUserPool\nChọn Use the Cognito Hosted UI\nDomain type chọn Use a Cognito domain\nCognito domain nhập tên miền đăng nhập Cognito mà bạn muốn App type chọn Public client\nApp client name nhập FCJ-Client\nAllowed callback URLs nhập http://\u0026rsquo;tên miền đã gán cho web của bạn\u0026rsquo;/contact-me.html\nGiao diện web thứ 1 là /index.html và giao diện web thứ 2 là /contact-me.html. Khi điền Allowed callback URLs phải có /contact-me.html ở phía sau tên miền của bạn, để từ giao diện của /index.html có thể callback sang /contact-me.html.\nKéo xuống tìm Advanced app client settings\nOAuth 2.0 grant types, bỏ chọn Authorization code grant và chọn Implicit grant\nOpenID Connect scopes chọn OpenID, Phone, Email, aws.cognito.signin.user.admin, Profile\nAllowed sign-out URLs - optional nhập http://\u0026rsquo;tên miền đã gán cho web của bạn\u0026rsquo;/index.html Kéo xuống và chọn Next\nỞ Step 6 Review and create\nKiểm tra lại và chọn Create user pool "
+},
+{
+	"uri": "//localhost:1313/vi/1-introduction/",
+	"title": "Introduction",
+	"tags": [],
+	"description": "",
+	"content": "The focus of this workshop is to educate you on how to use Guardrails for Amazon Bedrock and help you understand how to apply them within a practical scenario.\nThroughout the session, you’ll gain hands-on experience in configuring and testing guardrails, learn how to align them with your organization’s responsible AI policies, and explore how they enhance safety, compliance, and user trust in generative AI applications.\nBy the end of this workshop, you\u0026rsquo;ll be equipped with the knowledge to:\nCreate and manage custom guardrails tailored to different use cases\nDefine and enforce denied topics\nConfigure content filters to block harmful or inappropriate content\nUnderstand how guardrails integrate with foundation models across Amazon Bedrock\nApply guardrails effectively in real-world AI-powered applications\nPricing for This Workshop "
+},
+{
+	"uri": "//localhost:1313/vi/3-building-trustworthy-ai-with-amazon-bedrock-guardrails/1-overview/",
+	"title": "Overview",
+	"tags": [],
+	"description": "",
+	"content": "1 - Define the Guardrails Identify the specific needs of your customer service, like topics to avoid and content to filter. For instance, blocking discussions on investment advice in a tech support chat.\n2 - Configure Content Filters Set thresholds for different content categories based on the level of strictness required. Below are the thresholds that Amazon Bedrock Guardrails provide for both prompts and respnoses.\nHate: Describes input prompts and model responses that discriminate, criticize, insult, denounce, or dehumanize a person or group on the basis of an identity (such as race, ethnicity, gender, religion, sexual orientation, ability, and national origin).\nInsults: Describes input prompts and model responses that includes demeaning, humiliating, mocking, insulting, or belittling language. This type of language is also labeled as bullying.\nSexual: Describes input prompts and model responses that indicates sexual interest, activity, or arousal using direct or indirect references to body parts, physical traits, or sex.\nViolence: Describes input prompts and model responses that includes glorification of or threats to inflict physical pain, hurt, or injury toward a person, group or thing.\nMisconduct: Describes input prompts and model responses that seeks or provides information about engaging in criminal activity, or harming, defrauding, or taking advantage of a person, group or institution.\nPrompt Attack: Describes user prompts intended to bypass the safety and moderation capabilities of a foundation model (FM) in order to generate harmful content (also known as jailbreak), and ignore and override instructions specified by the developer (referred to as prompt injection). 3 - Add Denied Topics Add denied topics based on what was defined in step 1. Guardrails can be configured with a set of denied topics that are undesirable in the context of your AI application. You can define up to 30 denied topics. Input prompts and model completions will be evaluated against each of these denied topics. If one of the denied topics is detected, the blocked message configured as part of the guardrail will be returned to the user. 4 - Implement Guardrails Enforce Guardrails within Amazon Bedrock\n5 - Test and Fine tune Check if the guardrails are working properly through test cases and inputs.\n6 - Enforce Guadrails on Agent Regularly review the performance of Guardrails and make necessary adjustments to the configurations.\nLet us get started in the next lesson with creating our Guardrails.\n"
+},
+{
+	"uri": "//localhost:1313/vi/8-api-gateway/1-create-api/",
+	"title": "Tạo API",
+	"tags": [],
+	"description": "",
+	"content": "Tạo API Truy cập vào AWS Management Console\nTìm API Chọn API Gateway Trong giao diện APIs\nChọn Create API Trong giao diện Create API\nTìm REST API chọn Build Trong giao diện Create REST API\nChọn New API API name nhập FCJ-APIGateway API endpoint type chọn Regional Chọn Create API Sau khi tạo API\nVào Resources Chọn Create resource Trong giao diện Create resource\nResource name nhập serverless Chọn Create resource "
+},
+{
+	"uri": "//localhost:1313/vi/",
+	"title": "Building Trustworthy AI with Amazon Bedrock Guardrails",
+	"tags": [],
+	"description": "",
+	"content": "Building Trustworthy AI with Amazon Bedrock Guardrails Workshop Overview Guardrails for Amazon Bedrock Objectives of the Workshop In this workshop, you\u0026rsquo;ll explore how to set up and configure Amazon Bedrock Guardrails through a hands-on sample scenario.\nAmazon Bedrock Guardrails empowers you to establish policies that help protect your generative AI applications from producing or interacting with unsafe content. With Guardrails, you can tailor content moderation rules to meet the specific needs of your application.\nYou’ll be able to configure two key types of safeguards:\nDenied Topics: Specify topics that should be restricted in your application. For instance, a virtual assistant for online banking can be configured to avoid giving investment advice.\nContent Filters: Set sensitivity thresholds to detect and block potentially harmful content in categories such as hate speech, insults, sexually explicit material, and violence.\n"
+},
+{
+	"uri": "//localhost:1313/vi/5-cognito/2-test-userpool/",
+	"title": "Kiểm tra Cognito User pool",
+	"tags": [],
+	"description": "",
+	"content": "Kiểm tra Cognito User pool Trong giao diện User pool\nChọn User pool mà bạn vừa tạo Chọn App integration Kéo xuống phần App clients and analytics\nChọn App client name bạn đã tạo Kéo xuống phần Hosted UI\nChọn View Hosted UI Bạn đã mở được trang đăng ký tài khoản của Cognito, nhưng vẫn chưa vào được giao diện thứ 1 (/index.html). Để vào được giao diện này, bạn cần thêm link URL của Cognito vào code website của bạn.\nTrong giao diện Login của Cognito\nChọn copy đường dẫn trên trang đăng nhập của Cognito Mở code bạn đã clone\nChọn file index.html. Tìm dòng \u0026lsquo;Change - Sign in Link\u0026rsquo; và dán đường dẫn vào. Tiếp theo chọn file contact-me.html. Tìm dòng \u0026lsquo;Change - SignOut URL\u0026rsquo; và dán đường dẫn cũ vào. //Đường dẫn SignIn và SignOut có cấu trúc như sau:\rMAKE URL OF SIGN IN /login?client_id=\u0026amp;response_type=token\u0026amp;scope=aws.cognito.signin.user.admin+email+openid+phone+profile\u0026amp;redirect_uri=\rMAKE URL OF SIGN OUT /logout?client_id=\u0026amp;response_type=token\u0026amp;scope=aws.cognito.signin.user.admin+email+openid+phone+profile\u0026amp;redirect_uri= Sau đó vào file main.js\nTìm window.location.href và dán tên miền có đuôi /index.html của bạn. Cuối cùng update lại trên S3 của bạn.\nQuay lại giao diện trang web\nSau khi đã update trên S3, bạn quay lại giao diện Hosted UI\nChọn View Hosted UI\nLúc này, bạn đã vào được trang web thứ 1\nChọn LOGIN Chọn Sign up để đăng kí tài khoản Username nhập \u0026lsquo;Username của bạn\u0026rsquo;\nEmail nhập \u0026lsquo;Email của bạn\u0026rsquo;\nPassword nhập \u0026lsquo;Password của bạn\u0026rsquo; Vào Email bạn vừa đăng ký để lấy code Code đã được gửi vào Email của bạn Copy code và dán vào ô của Verification code\nSau đó chọn Confirm account Chúc mừng, bạn đã đăng ký tài khoản thành công và vào được giao diện thứ 2 "
+},
+{
+	"uri": "//localhost:1313/vi/3-building-trustworthy-ai-with-amazon-bedrock-guardrails/2-creating-the-guardrail/",
+	"title": "Creating The Guardrail",
+	"tags": [],
+	"description": "",
+	"content": " Go to Amazon Bedrock console, then click on Safeguards \u0026gt; Guardrails from the left pane Click on Create guardrails Enter the following details and click Next "
+},
+{
+	"uri": "//localhost:1313/vi/2-getting-started/",
+	"title": "Getting Started",
+	"tags": [],
+	"description": "",
+	"content": " To get started, go to AWS Console. Go to Amazon Bedrock console. Click on the hamburger icon to expand the left panel menu and click on Model access On the Model access screen, click on top right button Enable Specific Models. You can choose any text based model you prefer for the purpose of this workshop.\nAs an example we are choosing Mistral 7B Instruct part of Mistral AI.\nAfter selecting your desired text model, click on Next and on the next page click on Submit You will find that the model access has been granted "
+},
+{
+	"uri": "//localhost:1313/vi/8-api-gateway/2-create-method/",
+	"title": "Tạo Method",
+	"tags": [],
+	"description": "",
+	"content": "Tạo Method Trong giao diện Resources\nChọn Create method Trong giao diện Create method\nMethod type chọn GET\nIntegration type chọn Lambda function Lambda function chọn Lambda có tên FCJ-LambdaFunction bạn đã tạo\nKéo xuống và chọn Create method "
+},
+{
+	"uri": "//localhost:1313/vi/3-building-trustworthy-ai-with-amazon-bedrock-guardrails/",
+	"title": "Building Trustworthy AI with Amazon Bedrock Guardrails",
+	"tags": [],
+	"description": "",
+	"content": "What is Amazon Bedrock? Amazon Bedrock is a fully managed service that enables you to build and scale generative AI applications quickly and securely, starting with a foundation model (FM) of your choice. It provides access to a variety of leading FMs from top AI providers through a simple API, without the need to manage infrastructure.\nA key feature of Amazon Bedrock is Guardrails, which allows organizations to implement safeguards—referred to as guardrails—that monitor and control both user inputs and AI-generated outputs. These safeguards help ensure that the AI behavior aligns with your organization’s policies and ethical standards. Guardrails are model-agnostic and can be integrated across various use cases and applications.\nWhat is Guardrails for Amazon Bedrock? Guardrails for Amazon Bedrock is a powerful feature that enables you to establish safety controls within your generative AI applications. Guardrails help filter, block, or manage content that may be considered harmful, inappropriate, or misaligned with your organization’s policies.\nThese safeguards work across different foundation models and are designed to ensure responsible use of AI by checking both user inputs and AI outputs. In future updates, Guardrails will also support automatic redaction of personally identifiable information (PII)—further enhancing content safety and privacy.\nWith Guardrails, you can configure and enforce policies such as:\nDenied Topics: Specify topics that are not allowed within your application. Example: A virtual banking assistant can be restricted from giving investment advice.\nContent Filters: Set thresholds to detect and filter content related to: Hate speech, Insults, Sexual content, Violence,\u0026hellip;\n"
+},
+{
+	"uri": "//localhost:1313/vi/3-building-trustworthy-ai-with-amazon-bedrock-guardrails/3-configure-the-threshold/",
+	"title": "Configure The Threshold",
+	"tags": [],
+	"description": "",
+	"content": "Configure content filters by adjusting the degree of filtering to detect and block harmful user inputs and model responses that violate your usage policies.\nBelow are the options that are available:\nHate: Describes input prompts and model responses that discriminate, criticize, insult, denounce, or dehumanize a person or group on the basis of an identity (such as race, ethnicity, gender, religion, sexual orientation, ability, and national origin).\nInsults: Describes input prompts and model responses that includes demeaning, humiliating, mocking, insulting, or belittling language. This type of language is also labeled as bullying.\nSexual: Describes input prompts and model responses that indicates sexual interest, activity, or arousal using direct or indirect references to body parts, physical traits, or sex.\nViolence: Describes input prompts and model responses that includes glorification of or threats to inflict physical pain, hurt, or injury toward a person, group or thing.\nMisconduct: Describes input prompts and model responses that seeks or provides information about engaging in criminal activity, or harming, defrauding, or taking advantage of a person, group or institution.\nPrompt Attack: Describes user prompts intended to bypass the safety and moderation capabilities of a foundation model (FM) in order to generate harmful content (also known as jailbreak), and ignore and override instructions specified by the developer (referred to as prompt injection).\nFor the purposes of this workshop, we will configure Filter Strengths as HIGH Once done click on Next\n"
+},
+{
+	"uri": "//localhost:1313/vi/8-api-gateway/3-create-authorizers/",
+	"title": "Tạo Authorizer",
+	"tags": [],
+	"description": "",
+	"content": "Tạo Authorizer Trong gia diện API\nChọn Authorizers Chọn Create authorizer Trong giao diện Create authorizer\nAuthorizer name nhập FCJ-Auth Authorizer type chọn Cognito Cognito user pool chọn FCJ-UserPool Token source nhập Authorization Chọn Create authorizer Vào giao diện Resources\nChọn GET Chọn Method request Chọn Edit Trong giao diện Edit method request\nAuthorization chọn FCJ-Auth Authorization scopes nhập email, sau đó chọn add Kéo xuống và chọn Save "
+},
+{
+	"uri": "//localhost:1313/vi/4-sns/",
+	"title": "Khởi tạo SNS",
+	"tags": [],
+	"description": "",
+	"content": "Khởi tạo SNS Truy cập vào AWS Management Console\nTìm SNS Chọn Simple Notification Servicet Trong giao diện của SNS\nỞ phần Create topic, nhập Topic name: FCJ-SNSTopic Chọn Next step Trong giao diện của Create topic\nỞ phần Type chọn Standard Các phần còn lại giữ mặc định\nKéo xuống cuối trang và chọn Create topic Sau khi tạo Topic, chọn Subscriptions ở thanh bên trái\nChọn Create subscription Trong giao diện Create subscription\nỞ phần Topic ARN, chọn Topic bạn vừa tạo Protocol chọn Email Endpoint nhập email cá nhân của bạn Sau đó chọn Create subscription Sau khi Create subscription\nVào email bạn đã nhập khi tạo subscription\nChọn Confirm subscription để xác nhận đăng ký Bạn đã hoàn thành Confirm subscription\nSau khi chọn Confirm subscription bạn chỉ cần thoát ra là hoàn thành. (Nếu chọn click here to unsubcribe bạn sẽ hủy đăng ký và không thể nhận thông tin về email).\nTài liệu tham khảo How to use Amazon SNS with AWS Lambda Function "
+},
+{
+	"uri": "//localhost:1313/vi/8-api-gateway/4-create-stages/",
+	"title": "Tạo Stages",
+	"tags": [],
+	"description": "",
+	"content": "Tạo Stages Trong giao diện API bạn đã tạo\nChọn Resources Chọn Deploy API Trong giao diện Deploy API\nStage Chọn New stage Stage name nhập Dev Chọn Deploy "
+},
+{
+	"uri": "//localhost:1313/vi/5-cognito/",
+	"title": "Khởi tạo Cognito",
+	"tags": [],
+	"description": "",
+	"content": "Nội dung Khởi tạo Cognito User pool Kiểm tra Cognito User pool Tài liệu tham khảo Amazon Cognito - Control access to REST APIs using Amazon Cognito user pools as an authorizer "
+},
+{
+	"uri": "//localhost:1313/vi/8-api-gateway/5-enable-cors/",
+	"title": "Thiết lập cấu hình CORS",
+	"tags": [],
+	"description": "",
+	"content": "Thiết lập cấu hình CORS Trong giao diện API\nChọn Resources Chọn /serverless Chọn Enable CORS Trong giao diện Enable CORS\nGateway responses chọn Default 4XX và Default 5XX Access-Control-Allow-Methods chọn GET Access-Control-Allow-Headers nhập thêm Authorization vào cuối dòng Chọn Save "
+},
+{
+	"uri": "//localhost:1313/vi/8-api-gateway/6-config-api/",
+	"title": "Cấu hình API",
+	"tags": [],
+	"description": "",
+	"content": "Cấu hình API Trong giao diện API Chọn Stages Chọn Dev Copy Invoke URL https://7s5pb02ska.execute-api.ap-southeast-1.amazonaws.com/Dev Trong giao diện code web Tìm file api.js Dán Invoke URL vào dòng số 8 và thêm /serverless phía sau. Lưu lại và upload lên S3 "
+},
+{
+	"uri": "//localhost:1313/vi/6-dynamodb/",
+	"title": "Khởi tạo DynamoDB",
+	"tags": [],
+	"description": "",
+	"content": "Khởi tạo DynamoDB Truy cập vào AWS Management Console\nTìm DynamoDB Chọn DynamoDB Ở giao diện Dashboard của DynamoDB\nChọn Create table Ở giao diện Create table\nTable name nhập FCJ-DynamoDB\nPartition key nhập id chọn string\nSort key nhập name chọn string Table settings để mặc định\nKéo xuống và chọn Create table Tài liệu tham khảo Working with tables and data in DynamoDB "
+},
+{
+	"uri": "//localhost:1313/vi/7-lambda-function/",
+	"title": "Triển khai Lambda function",
+	"tags": [],
+	"description": "",
+	"content": "Triển khai Lambda function Truy cập vào AWS Management Console\nTìm Lambda Chọn Lambda Trong giao diện Lambda\nChọn Create a function Trong giao diện Create function\nChọn Author from scratch\nFunction name nhập FCJ-LambdaFunction\nRuntime chọn Python 3.9\nArchitecture chọn x86_64\nKéo xuống và chọn Create function Sau khi tạo bạn sẽ thấy giao diện sau đây Nhập Source code cho Lambda Function\nChọn Code Dán code vào import boto3\rimport uuid\r# Tạo tài nguyên DynamoDB\rdynamodb = boto3.resource(\u0026#39;dynamodb\u0026#39;)\r# Đặt tên bảng DynamoDB\rtable = dynamodb.Table(\u0026#39;FCJ-DynamoDB\u0026#39;)\r# Tạo một SNS Client\rclient_sns = boto3.client(\u0026#39;sns\u0026#39;)\r# Hàm này sẽ được kích hoạt bởi API Gateway\rdef lambda_handler(event, context):\rtry:\r# Kiểm tra sự tồn tại của các key bắt buộc\rrequired_keys = [\u0026#39;name\u0026#39;, \u0026#39;email\u0026#39;, \u0026#39;subject\u0026#39;, \u0026#39;description\u0026#39;]\rfor key in required_keys:\rif key not in event:\rraise KeyError(f\u0026#34;Missing required key: {key}\u0026#34;)\r# Tạo một ID người dùng\rid = str(uuid.uuid4())\r# Gửi tin nhắn đến SNS\rhandle_sns(id, event)\r# Lưu trữ dữ liệu vào DynamoDB\rstatusCode = handle_dynamo_db(id, event)\rreturn {\r\u0026#39;statusCode\u0026#39;: statusCode,\r}\rexcept KeyError as ke:\rreturn {\r\u0026#39;statusCode\u0026#39;: 400,\r\u0026#39;body\u0026#39;: json.dumps(f\u0026#34;Missing required key: {str(ke)}\u0026#34;)\r}\rexcept Exception as e:\rreturn {\r\u0026#39;statusCode\u0026#39;: 500,\r\u0026#39;body\u0026#39;: json.dumps(\u0026#39;Error occurred: \u0026#39; + str(e))\r}\r# Gửi một tin nhắn đến SNS\rdef handle_sns(id, event):\rtry:\rsns_message = f\u0026#34;\u0026#34;\u0026#34;\rYou got a new Message from https://workshop.conglyblog.id.vn\rThe message is as follows\rid : {id}\rName : {event[\u0026#39;name\u0026#39;]}\remail : {event[\u0026#39;email\u0026#39;]}\rMessage : {event[\u0026#39;description\u0026#39;]}\rSubject : {event[\u0026#39;subject\u0026#39;]}\r\u0026#34;\u0026#34;\u0026#34;\rclient_sns.publish(\r# Thay đổi ARN với ARN của SNS của bạn\rTopicArn=\u0026#39;arn:aws:sns:ap-southeast-1:336760284039:FCJ-SNSTopic\u0026#39;,\rMessage=sns_message,\rSubject=event[\u0026#39;subject\u0026#39;]\r)\rexcept KeyError as ke:\rprint(f\u0026#34;Key error: {ke}\u0026#34;)\rraise\rexcept Exception as e:\rprint(f\u0026#34;An error occurred when sending SNS: {e}\u0026#34;)\rraise\r# Thêm một mục vào bảng DynamoDB\rdef handle_dynamo_db(id, event):\rtry:\rresponse = table.put_item(\rItem={\r\u0026#39;id\u0026#39;: id,\r\u0026#39;name\u0026#39;: event[\u0026#39;name\u0026#39;],\r\u0026#39;email\u0026#39;: event[\u0026#39;email\u0026#39;],\r\u0026#39;subject\u0026#39;: event[\u0026#39;subject\u0026#39;],\r\u0026#39;description\u0026#39;: event[\u0026#39;description\u0026#39;],\r}\r)\rreturn response[\u0026#39;ResponseMetadata\u0026#39;][\u0026#39;HTTPStatusCode\u0026#39;]\rexcept Exception as e:\rprint(f\u0026#34;An error occurred when writing to DynamoDB: {e}\u0026#34;)\rraise Thay đổi tên miền này của đoạn code trên: \u0026ldquo;You got a new Message from https://workshop.conglyblog.id.vn\u0026rdquo; thành tên miền của bạn.\nChọn Deploy Cấu hình IAM Roles cho Lambda\nChọn Configuration Chọn Permissions Chuyển hướng đến IAM Roles Trong giao diện Permissions\nChọn Add permissions\nChọn Attach policies Tìm SNS\nChọn AmazonSNSFullAccess Tiếp tục, tìm DynamoDB\nChọn AmazonDynamoDBFullAccess\nChọn Add permissions Tài liệu tham khảo Building Lambda functions with Python "
+},
+{
+	"uri": "//localhost:1313/vi/8-api-gateway/",
+	"title": "Thiết lập API Gateway",
+	"tags": [],
+	"description": "",
+	"content": "Nội dung Tạo API Tạo Method Tạo Authorizers Tạo Stages Thiết lập cấu hình CORS Cấu hình API Tài liệu tham khảo API Gateway REST APIs "
+},
+{
+	"uri": "//localhost:1313/vi/9-test-webapp/",
+	"title": "Kiểm tra Web Application",
+	"tags": [],
+	"description": "",
+	"content": "Kiểm tra Web Application Vào giao diện trình duyệt\nNhập tên miền bạn đã tạo cho website (Ví dụ: https://workshop.conglyblog.id.vn/index.html) Chọn LOGIN Trong giao diện Login\nNhập Username Nhập Password Chọn Sign in Trong giao diện Contact\nNhập thông tin của bạn Chọn Send Message Nếu thông báo là Successfully Sent the Message nghĩa là bạn đã gửi được tin nhắn. Vào Email kiểm tra\nVào Email bạn đã đăng ký trên SNS Bạn có thể thấy, tin nhắn đã được gửi đến Email của bạn. Vào DynamoDB kiểm tra\nVào DynamoDB\nChọn Explore items\nChọn Items returned bạn nhận được Khi vào, bạn sẽ thấy các thông tin của người gửi "
+},
+{
+	"uri": "//localhost:1313/vi/10-clean-resource/",
+	"title": "Dọn dẹp tài nguyên",
+	"tags": [],
+	"description": "",
+	"content": "Chúng ta sẽ tiến hành các bước sau để xóa các tài nguyên chúng ta đã tạo trong bài thực hành này.\nXóa S3 Truy cập vào giao diện của S3\nChọn Buckets\nChọn Bucket name bạn đã tạo\nChọn Delete Trong giao diện Delete bucket\nChọn Empty bucket Trong giao diện Empty bucket\nNhập permanently delete vào mục confirm Chọn Empty Sau khi Empty thành công\nChọn Bucket Chọn lại Bucket name mà bạn muốn xóa Chọn Delete Trong giao diện Delete bucket\nCopy Bucket name mà bạn đã tạo Dán vào mục confirm Chọn Delete bucket Xóa Cloudfront Truy cập vào giao diện của Cloudfront Chọn Distributions Chọn Distribution ID bạn đã tạo Chọn Disable Đợi khoảng vài phút, sau đó chọn Delete Xóa Route 53 Truy cập vào giao diện của Route 53 Chọn Hosted zones Chọn Hosted zone name bạn đã tạo Chọn Delete Trong giao diện Delete hosted zone Nhập delete vào mục confirm Chọn Delete Xóa SNS Truy cập vào giao diện của SNS Chọn Topics Chọn Topic name bạn đã tạo Chọn Delete Trong giao diện Delete topic Nhập delete me vào mục confirm Chọn Delete Xóa Cognito Truy cập vào giao diện của Cognito Chọn User pools Chọn User pool name bạn đã tạo Chọn Delete Trong giao diện Delete user pool Chọn Delete Cognito domain fcj06f03 that you assigned và Deactivate deletion protection Nhập tên user pool của bạn vào mục confirm Chọn Delete Xóa DynamoDB Truy cập vào giao diện của DynamoDB Chọn Tables Chọn Table name bạn đã tạo Chọn Delete Trong giao diện Delete table Chọn Delete all CloudWatch alarms for FCJ-DynamoDB. Nhập confirm vào mục confirm Chọn Delete Xóa Lambda Truy cập vào giao diện của Lambda Chọn Functions Chọn Function name bạn đã tạo Chọn Actions Chọn Delete Trong giao diện Delete functions Nhập delete vào mục confirm Chọn Delete Xóa API Gateway Truy cập vào giao diện của API Gateway Chọn APIs Chọn API name bạn đã tạo Chọn Delete Trong giao diện Delete API Nhập confirm vào mục confirm Chọn Delete Xóa WAF Truy cập vào giao diện của WAF Chọn Web ACLs Chọn Web ACL name bạn đã tạo Chọn Associated AWS resources Chọn Disassociate Trong giao diện Disassociate Nhập remove vào mục confirm Disassociation Chọn Disassociate Vào lại Web ACLs Chọn Web ACL name bạn đã tạo Chọn Delete Trong giao diện Delete Nhập delete vào mục confirm Chọn Delete "
+},
+{
+	"uri": "//localhost:1313/vi/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "//localhost:1313/vi/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]
