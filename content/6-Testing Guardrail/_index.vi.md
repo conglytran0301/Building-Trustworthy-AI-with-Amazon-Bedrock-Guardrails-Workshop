@@ -1,5 +1,5 @@
 +++
-title = "Khởi tạo DynamoDB"
+title = "Testing Guardrail"
 date = 2020-05-14T00:38:32+07:00
 weight = 6
 chapter = false
