@@ -1,15 +1,29 @@
 +++
-title = "Creating Denied Topics"
+title = "Denied Topic - Financial Advice"
 date = 2024-05-14T00:38:32+07:00
 weight = 4
 chapter = false
 pre = "<b>4.1 </b>"
 +++
 
-Guardrails can be configured with a set of denied topics that are undesirable in the context of your generative AI application. For example, a bank may want their AI assistant to avoid any conversation related to investment advice or engage in conversations related to cyrptocurrencies.
+1. On the Add Denied Topics Section - Click **Add Denied Topic**
+   ![DeniedTopic_1](/images/4/DeniedTopic_1.png?width=90pc)
 
-You can define up to 30 denied topics. Input prompts and model completions will be evaluated against each of these denied topics. If one of the denied topics is detected, the blocked message configured as part of the guardrail will be returned to the user.
+2. Enter the following information into the Guardrail
 
-Denied topics can be defined by providing a natural language definition of the topic along with a few optional example phrases of the topic. The definition and example phrases are used to detect if an input prompt or a model completion belongs to the topic.
+   **Name:** Financial Advice
 
-In the following section we will configure three types of Denied topics for m**edical advice**, **financial advice** and **political advice**.
+   **Definition For Topic:** Discussions that involve providing guidance, recommendations, or suggestions related to managing, investing, or handling finances, investments, or assets.
+
+   **Sample Phrases:**
+
+   - Can you suggest some good stocks to invest in right now ?
+   - What's the best way to save for retirement ?
+   - Should I put my money in a high-risk investment ?
+   - How can I maximize my returns on investments ?
+   - Is it a good time to buy real estate ?
+
+   ![FinancialAdvice](/images/4/FinancialAdvice.png?width=90pc)
+
+3. Once field are completed, click on **Confirm** to create the denied topic
+   ![DeniedTopic_2](/images/4/DeniedTopic_2.png?width=90pc)

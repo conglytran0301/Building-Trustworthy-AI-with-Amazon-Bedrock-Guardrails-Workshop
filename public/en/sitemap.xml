@@ -2,32 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/5-cognito/1-create-userpool/</loc>
-    <lastmod>2024-08-19T00:38:32+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/5-cognito/1-create-userpool/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/5-cognito/1-create-userpool/"
-                />
-  </url><url>
-    <loc>//localhost:1313/8-api-gateway/1-create-api/</loc>
-    <lastmod>2020-05-14T00:38:32+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/8-api-gateway/1-create-api/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/8-api-gateway/1-create-api/"
-                />
-  </url><url>
     <loc>//localhost:1313/1-introduction/</loc>
     <lastmod>2020-05-14T00:38:32+07:00</lastmod>
     <xhtml:link
@@ -65,32 +39,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="//localhost:1313/"
-                />
-  </url><url>
-    <loc>//localhost:1313/5-cognito/2-test-userpool/</loc>
-    <lastmod>2024-08-19T00:38:32+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/5-cognito/2-test-userpool/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/5-cognito/2-test-userpool/"
-                />
-  </url><url>
-    <loc>//localhost:1313/8-api-gateway/2-create-method/</loc>
-    <lastmod>2020-05-14T00:38:32+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/8-api-gateway/2-create-method/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/8-api-gateway/2-create-method/"
                 />
   </url><url>
     <loc>//localhost:1313/3-building-trustworthy-ai-with-amazon-bedrock-guardrails/2-creating-the-guardrail/</loc>
@@ -145,147 +93,121 @@
                 href="//localhost:1313/3-building-trustworthy-ai-with-amazon-bedrock-guardrails/3-configure-the-threshold/"
                 />
   </url><url>
-    <loc>//localhost:1313/8-api-gateway/3-create-authorizers/</loc>
-    <lastmod>2020-05-14T00:38:32+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/8-api-gateway/3-create-authorizers/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/8-api-gateway/3-create-authorizers/"
-                />
-  </url><url>
-    <loc>//localhost:1313/4-sns/</loc>
+    <loc>//localhost:1313/4-creating-denied-topics/</loc>
     <lastmod>2024-05-14T00:38:32+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/4-sns/"
+                href="//localhost:1313/vi/4-creating-denied-topics/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/4-sns/"
+                href="//localhost:1313/4-creating-denied-topics/"
                 />
   </url><url>
-    <loc>//localhost:1313/8-api-gateway/4-create-stages/</loc>
-    <lastmod>2020-05-14T00:38:32+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/8-api-gateway/4-create-stages/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/8-api-gateway/4-create-stages/"
-                />
-  </url><url>
-    <loc>//localhost:1313/5-cognito/</loc>
+    <loc>//localhost:1313/4-creating-denied-topics/1-denied-topic---financial-advice/</loc>
     <lastmod>2024-05-14T00:38:32+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/5-cognito/"
+                href="//localhost:1313/vi/4-creating-denied-topics/1-denied-topic---financial-advice/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/5-cognito/"
+                href="//localhost:1313/4-creating-denied-topics/1-denied-topic---financial-advice/"
                 />
   </url><url>
-    <loc>//localhost:1313/8-api-gateway/5-enable-cors/</loc>
+    <loc>//localhost:1313/4-creating-denied-topics/3-denied-topic---medical-advice/</loc>
+    <lastmod>2024-05-14T00:38:32+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/4-creating-denied-topics/3-denied-topic---medical-advice/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/4-creating-denied-topics/3-denied-topic---medical-advice/"
+                />
+  </url><url>
+    <loc>//localhost:1313/4-creating-denied-topics/2-denied-topic---political-advice/</loc>
+    <lastmod>2024-05-14T00:38:32+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/4-creating-denied-topics/2-denied-topic---political-advice/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/4-creating-denied-topics/2-denied-topic---political-advice/"
+                />
+  </url><url>
+    <loc>//localhost:1313/5-add-filters-to-guardrail/</loc>
+    <lastmod>2024-05-14T00:38:32+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/5-add-filters-to-guardrail/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/5-add-filters-to-guardrail/"
+                />
+  </url><url>
+    <loc>//localhost:1313/6-testing-guardrail/</loc>
     <lastmod>2020-05-14T00:38:32+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/8-api-gateway/5-enable-cors/"
+                href="//localhost:1313/vi/6-testing-guardrail/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/8-api-gateway/5-enable-cors/"
+                href="//localhost:1313/6-testing-guardrail/"
                 />
   </url><url>
-    <loc>//localhost:1313/8-api-gateway/6-config-api/</loc>
+    <loc>//localhost:1313/7-apply-guardrails-to-agent/</loc>
     <lastmod>2020-05-14T00:38:32+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/8-api-gateway/6-config-api/"
+                href="//localhost:1313/vi/7-apply-guardrails-to-agent/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/8-api-gateway/6-config-api/"
+                href="//localhost:1313/7-apply-guardrails-to-agent/"
                 />
   </url><url>
-    <loc>//localhost:1313/6-dynamodb/</loc>
+    <loc>//localhost:1313/8-test-guardrails-with-the-agent/</loc>
     <lastmod>2020-05-14T00:38:32+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/6-dynamodb/"
+                href="//localhost:1313/vi/8-test-guardrails-with-the-agent/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/6-dynamodb/"
+                href="//localhost:1313/8-test-guardrails-with-the-agent/"
                 />
   </url><url>
-    <loc>//localhost:1313/7-lambda-function/</loc>
-    <lastmod>2020-05-14T00:38:32+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/7-lambda-function/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/7-lambda-function/"
-                />
-  </url><url>
-    <loc>//localhost:1313/8-api-gateway/</loc>
-    <lastmod>2020-05-14T00:38:32+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/8-api-gateway/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/8-api-gateway/"
-                />
-  </url><url>
-    <loc>//localhost:1313/9-test-webapp/</loc>
+    <loc>//localhost:1313/9-clean-resource/</loc>
     <lastmod>2024-08-19T00:38:32+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/9-test-webapp/"
+                href="//localhost:1313/vi/9-clean-resource/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/9-test-webapp/"
-                />
-  </url><url>
-    <loc>//localhost:1313/10-clean-resource/</loc>
-    <lastmod>2024-08-19T00:38:32+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/10-clean-resource/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/10-clean-resource/"
+                href="//localhost:1313/9-clean-resource/"
                 />
   </url><url>
     <loc>//localhost:1313/categories/</loc>
