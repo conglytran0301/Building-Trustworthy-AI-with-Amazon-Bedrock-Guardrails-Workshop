@@ -12,21 +12,21 @@
     <title>Add filters to Guardrail :: AWS Serverless</title>
 
     
-    <link href="/css/nucleus.css?1744615639" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1744615639" rel="stylesheet">
-    <link href="/css/hybrid.css?1744615639" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1744615639" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1744615639" rel="stylesheet">
-    <link href="/css/auto-complete.css?1744615639" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1744615639" rel="stylesheet">
-    <link href="/css/theme.css?1744615639" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1744615639" rel="stylesheet">
+    <link href="/css/nucleus.css?1744628545" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1744628545" rel="stylesheet">
+    <link href="/css/hybrid.css?1744628545" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1744628545" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1744628545" rel="stylesheet">
+    <link href="/css/auto-complete.css?1744628545" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1744628545" rel="stylesheet">
+    <link href="/css/theme.css?1744628545" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1744628545" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1744615639" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1744628545" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1744615639"></script>
+    <script src="/js/jquery-3.3.1.min.js?1744628545"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1744615639"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1744615639"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1744628545"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1744628545"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1744615639"></script>
+<script type="text/javascript" src="/js/search.js?1744628545"></script>
 
     
   </div>
@@ -646,15 +646,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -678,15 +670,33 @@
 
 
 
-	<h4 id="nội-dung">Nội dung</h4>
-<ol>
-<li><a href="1-create-userpool">Khởi tạo Cognito User pool</a></li>
-<li><a href="2-test-userpool">Kiểm tra Cognito User pool</a></li>
+	<ol>
+<li>In this section you can add optional word filters that you do not want in user inputs or the model responses.</li>
 </ol>
-<h4 id="tài-liệu-tham-khảo">Tài liệu tham khảo</h4>
+<p>It is recommended to check the <strong>&ldquo;Profanity Filter&rdquo;</strong> to ensure that no abusive words can be used during customer interactions
+<img alt="WordFilter1" src="/images/5/WordFilter1.png?width=90pc"></p>
+<p>Word filters can be used to block specific words and phrases in both input prompts and model responses. These filters are essential for maintaining the integrity, professionalism, and compliance of interactions, especially in sensitive and regulated environments like banking. These can be added manually or uploaded from a list.</p>
+<p>Examples That Can Be Used:</p>
 <ul>
-<li><a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-integrate-with-cognito.html">Amazon Cognito - Control access to REST APIs using Amazon Cognito user pools as an authorizer</a></li>
+<li>&ldquo;suicide&rdquo;</li>
+<li>&ldquo;self-harm&rdquo;</li>
+<li>&ldquo;terrorist&rdquo;</li>
+<li>&ldquo;illegal&rdquo;</li>
 </ul>
+<p>Add these words and click Next:
+<img alt="img" src="/images/5/img.png?width=90pc"></p>
+<ol start="2">
+<li>Click on Next. We do not have any requirements to define PII so click on next below to reach <strong>Define blocked messaging</strong> section</li>
+</ol>
+<p><img alt="img_1" src="/images/5/img_1.png?width=90pc"></p>
+<ol start="3">
+<li>Enable optional contextual grounding check and set to default</li>
+</ol>
+<p><img alt="img_2" src="/images/5/img_2.png?width=90pc"></p>
+<ol start="4">
+<li>Click on <strong>Next</strong>. Review the information and Click on <strong>Create Guardrail</strong> from the bottom of the page.</li>
+</ol>
+<p><img alt="FinishCreateGuardrail" src="/images/5/FinishCreateGuardrail.gif?width=90pc"></p>
 
 
 
@@ -995,19 +1005,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1744615639"></script>
-    <script src="/js/perfect-scrollbar.min.js?1744615639"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1744615639"></script>
-    <script src="/js/jquery.sticky.js?1744615639"></script>
-    <script src="/js/featherlight.min.js?1744615639"></script>
-    <script src="/js/highlight.pack.js?1744615639"></script>
+    <script src="/js/clipboard.min.js?1744628545"></script>
+    <script src="/js/perfect-scrollbar.min.js?1744628545"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1744628545"></script>
+    <script src="/js/jquery.sticky.js?1744628545"></script>
+    <script src="/js/featherlight.min.js?1744628545"></script>
+    <script src="/js/highlight.pack.js?1744628545"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1744615639"></script>
-    <script src="/js/learn.js?1744615639"></script>
-    <script src="/js/hugo-learn.js?1744615639"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1744628545"></script>
+    <script src="/js/learn.js?1744628545"></script>
+    <script src="/js/hugo-learn.js?1744628545"></script>
 
-    <link href="/mermaid/mermaid.css?1744615639" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1744615639"></script>
+    <link href="/mermaid/mermaid.css?1744628545" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1744628545"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

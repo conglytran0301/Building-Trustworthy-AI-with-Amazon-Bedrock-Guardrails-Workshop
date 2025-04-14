@@ -6,162 +6,33 @@ chapter = false
 pre = "<b>7. </b>"
 +++
 
-#### Triển khai Lambda function
+Now that these guardrails has been tested, ABCD Bank can create agents and enforce these guardrails on the same.
 
-1. Truy cập vào
-   [AWS Management Console](https://aws.amazon.com/vi/free/?gclid=CjwKCAjw_ZC2BhAQEiwAXSgClvWbbk-Y8aK5QEAweAN7K8tLmdmvIiZuLvrcXaHfX9HrfLJlZr3U2xoC6y4QAvD_BwE&trk=c4f45c53-585c-4b31-8fbf-d39fbcdc603a&sc_channel=ps&ef_id=CjwKCAjw_ZC2BhAQEiwAXSgClvWbbk-Y8aK5QEAweAN7K8tLmdmvIiZuLvrcXaHfX9HrfLJlZr3U2xoC6y4QAvD_BwE:G:s&s_kwcid=AL!4422!3!637354294239!e!!g!!aws!19043613274!143453611386&all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=*all&awsf.Free%20Tier%20Categories=*all)
+1. Click on Agents under Builder tools from left of the Amazon Bedrock console page.
+   ![img](/images/7/img.png?width=90pc)
 
-   - Tìm **Lambda**
-   - Chọn **Lambda**
-     ![01-Lambda](/images/8/8-lambda-01.png?width=90pc)
+2. Click on **"Create Agent"**
+   ![img_1](/images/7/img_1.png?width=90pc)
 
-2. Trong giao diện **Lambda**
+3. (Optional) Change the automatically generated Name for the agent and provide an optional Description for it. Choose **Create**. You will be taken to the Agent builder for your newly created agent, where you can configure your agent.
+   ![Agent3](/images/7/Agent3.png?width=90pc)
 
-   - Chọn **Create a function**
-     ![02-Lambda](/images/8/8-lambda-02.png?width=90pc)
+4. For the Agent resource role, select **"Create and use a new service role"** to let Amazon Bedrock create the service role and set up the required permissions on your behalf.
+   ![img_2](/images/7/img_2.png?width=90pc)
 
-3. Trong giao diện **Create function**
+5. In the **Select Model** you can choose a model for the agent. Refer here to see the supported models for agents. Within the instructions for the agent, provide the following instructions.
 
-   - Chọn **Author from scratch**
-   - **Function name** nhập `FCJ-LambdaFunction`
-   - **Runtime** chọn **Python 3.9**
-   - **Architecture** chọn **x86_64**
-   - Kéo xuống và chọn **Create function**
-     ![03-Lambda](/images/8/8-lambda-03.png?width=90pc)
+_"You are a customer service representative at ABCD Bank, a leading financial institution. You are friendly, professional, and attentive. Your primary responsibilities include assisting customers with their needs, providing information about products and services, addressing customer inquiries, and ensuring a positive customer experience."_
 
-   - Sau khi tạo bạn sẽ thấy giao diện sau đây
-     ![04-Lambda](/images/8/8-lambda-04.png?width=90pc)
+![Agent5](/images/7/Agent5.png?width=90pc)
 
-4. Nhập **Source code** cho **Lambda Function**
+6. Scroll down to the **Guardrails details** section, choose **Edit** to associate our guardrail with the agent.
+   ![img_3](/images/7/img_3.png?width=90pc)
 
-   - Chọn **Code**
-   - Dán **code** vào
-     ![05-Lambda](/images/8/8-lambda-05.png?width=90pc)
+7. Select our Guardrail and Click on **Save and Exit** to associate our guardrail with the agent. _In case you recieve a message of "You must save your agent with an Agent Resource Role defined before adding a guardrail" then try saving the Agent first before associating the Guardrail_
+   ![img_4](/images/7/img_4.png?width=90pc)
 
-   ```import json  # Đảm bảo đã import json
-   import boto3
-   import uuid
+8. Click on **Prepare** the agent in order to test it with our updated configurations in the test window.
+   ![img_5](/images/7/img_5.png?width=90pc)
 
-   # Tạo tài nguyên DynamoDB
-   dynamodb = boto3.resource('dynamodb')
-
-   # Đặt tên bảng DynamoDB
-   table = dynamodb.Table('FCJ-DynamoDB')
-
-   # Tạo một SNS Client
-   client_sns = boto3.client('sns')
-
-   # Hàm này sẽ được kích hoạt bởi API Gateway
-   def lambda_handler(event, context):
-       try:
-           # Kiểm tra sự tồn tại của các key bắt buộc
-           required_keys = ['name', 'email', 'subject', 'description']
-           for key in required_keys:
-               if key not in event:
-                   raise KeyError(f"Missing required key: {key}")
-
-           # Tạo một ID người dùng
-           id = str(uuid.uuid4())
-
-           # Gửi tin nhắn đến SNS
-           handle_sns(id, event)
-
-           # Lưu trữ dữ liệu vào DynamoDB
-           statusCode = handle_dynamo_db(id, event)
-
-           return {
-               'statusCode': statusCode,
-           }
-
-       except KeyError as ke:
-           return {
-               'statusCode': 400,
-               'body': json.dumps(f"Missing required key: {str(ke)}")
-           }
-
-       except Exception as e:
-           return {
-               'statusCode': 500,
-               'body': json.dumps('Error occurred: ' + str(e))
-           }
-
-   # Gửi một tin nhắn đến SNS
-   def handle_sns(id, event):
-       try:
-           sns_message = f"""
-               You got a new Message from https://workshop.conglyblog.id.vn
-               The message is as follows
-
-               id      : {id}
-               Name    : {event['name']}
-               email   : {event['email']}
-               Message : {event['description']}
-               Subject : {event['subject']}
-           """
-
-           client_sns.publish(
-               # Thay đổi ARN với ARN của SNS của bạn
-               TopicArn='arn:aws:sns:ap-southeast-1:336760284039:FCJ-SNSTopic',
-               Message=sns_message,
-               Subject=event['subject']
-           )
-
-       except KeyError as ke:
-           print(f"Key error: {ke}")
-           raise
-
-       except Exception as e:
-           print(f"An error occurred when sending SNS: {e}")
-           raise
-
-   # Thêm một mục vào bảng DynamoDB
-   def handle_dynamo_db(id, event):
-       try:
-           response = table.put_item(
-               Item={
-                   'id': id,
-                   'name': event['name'],
-                   'email': event['email'],
-                   'subject': event['subject'],
-                   'description': event['description'],
-               }
-           )
-           return response['ResponseMetadata']['HTTPStatusCode']
-
-       except Exception as e:
-           print(f"An error occurred when writing to DynamoDB: {e}")
-           raise
-   ```
-
-   {{% notice note %}}
-   Thay đổi tên miền này của đoạn code trên: **"You got a new Message from https://workshop.conglyblog.id.vn"** thành **tên miền** của bạn.
-   {{% /notice %}}
-
-   - Chọn **Deploy**
-     ![06-Lambda](/images/8/8-lambda-06.png?width=90pc)
-
-5. Cấu hình **IAM Roles** cho Lambda
-
-   - Chọn **Configuration**
-   - Chọn **Permissions**
-   - Chuyển hướng đến **IAM Roles**
-     ![07-Lambda](/images/8/8-lambda-07.png?width=90pc)
-
-6. Trong giao diện **Permissions**
-
-   - Chọn **Add permissions**
-   - Chọn **Attach policies**
-     ![11-Lambda](/images/8/8-lambda-11.png?width=90pc)
-
-   - Tìm **SNS**
-   - Chọn **AmazonSNSFullAccess**
-     ![09-Lambda](/images/8/8-lambda-09.png?width=90pc)
-
-   - Tiếp tục, tìm **DynamoDB**
-   - Chọn **AmazonDynamoDBFullAccess**
-   - Chọn **Add permissions**
-     ![10-Lambda](/images/8/8-lambda-10.png?width=90pc)
-
-#### Tài liệu tham khảo
-
-- [Building Lambda functions with Python](https://docs.aws.amazon.com/lambda/latest/dg/lambda-python.html)
+9. Now you can test the agent using the same scenarios we selected earlier in the right panel

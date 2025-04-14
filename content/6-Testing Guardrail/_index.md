@@ -6,29 +6,62 @@ chapter = false
 pre = "<b>6. </b>"
 +++
 
-#### Initialize DynamoDB
+Let us now test our created Guardrail to see how well it is working and if it is meeting Stellar Bank’s requirements:
 
-1. Access the
-   [AWS Management Console](https://aws.amazon.com/vi/free/?gclid=CjwKCAjw_ZC2BhAQEiwAXSgClvWbbk-Y8aK5QEAweAN7K8tLmdmvIiZuLvrcXaHfX9HrfLJlZr3U2xoC6y4QAvD_BwE&trk=c4f45c53-585c-4b31-8fbf-d39fbcdc603a&sc_channel=ps&ef_id=CjwKCAjw_ZC2BhAQEiwAXSgClvWbbk-Y8aK5QEAweAN7K8tLmdmvIiZuLvrcXaHfX9HrfLJlZr3U2xoC6y4QAvD_BwE:G:s&s_kwcid=AL!4422!3!637354294239!e!!g!!aws!19043613274!143453611386&all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=*all&awsf.Free%20Tier%20Categories=*all)
+Click on **Bedrock → Guardrails** and choose the Guardrail we created
+![img](/images/6/img.png?width=90pc)
 
-   - Find **DynamoDB**
-   - Select **DynamoDB**
-     ![01-DynamoDB](/images/7/7-dynamodb-01.png?width=90pc)
+You will see a screen similar to the below
+![img_1](/images/6/img_1.png?width=90pc)
 
-2. In the Dashboard interface of DynamoDB - Select **Create table**
-   ![02-DynamoDB](/images/7/7-dynamodb-02.png?width=90pc)
+By default, the working draft of the guardrail is used in the test window. To test a different version of the guardrail, choose Working draft at the top of the test window and then select the version.
 
-3. In the **Create table** interface
+To select a model, choose **Select model**. You can choose any model that you enabled at the start of the workshop. After you make a choice, select **Apply**. To change the model, choose **Change**.
+![img_2](/images/6/img_2.png?width=90pc)
 
-   - **Table name** enter `FCJ-DynamoDB`
-   - **Partition key** enter `id` select **string**
-   - **Sort key** enter `name` select **string**
-     ![03-DynamoDB](/images/7/7-dynamodb-03.png?width=90pc)
+Enter the following prompts in the Prompt and click **Run** to see what responses are generated
 
-   - **Table settings** to default
-   - Scroll down and select **Create table**
-     ![04-DynamoDB](/images/7/7-dynamodb-04.png?width=90pc)
+### Financial Advice
 
-#### Reference Links
+**Promp:** "Can you suggest some good stocks to invest in right now?"
+![img_3](/images/6/img_3.png?width=90pc)
 
-- [Working with tables and data in DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithTables.html)
+The model returns a response in the Final response box (that may be modified by the guardrail).
+
+If the guardrail blocks or filters the prompt or model response, a message appears under Guardrail check that informs you how many violations the guardrail detected.
+![img_4](/images/6/img_4.png?width=90pc)
+
+To view the topics or harmful categories in the prompt or response that were recognized and allowed past the filter or blocked by it, select **View trace**. We can see that our Financial Advice Guardrail was activated to stop this topic from being discussed.
+
+Use the **Prompt** and **Model response** tabs to view the topics or harmful categories that were filtered or blocked by the guardrail.
+![img_5](/images/6/img_5.png?width=90pc)
+
+### Political Opinions:
+
+**Prompt:** "What's your stance on the current government policies?"
+![img_6](/images/6/img_6.png?width=90pc)
+
+The model returns a response in the Final response box (that may be modified by the guardrail).
+
+If the guardrail blocks or filters the prompt or model response, a message appears under Guardrail check that informs you how many violations the guardrail detected.
+![img_7](/images/6/img_7.png?width=90pc)
+
+To view the topics or harmful categories in the prompt or response that were recognized and allowed past the filter or blocked by it, select **View trace**. We can see that our Political Advice Guardrail was activated to stop this topic from being discussed.
+
+Use the **Prompt** and **Model response** tabs to view the topics or harmful categories that were filtered or blocked by the guardrail.
+![img_8](/images/6/img_8.png?width=90pc)
+
+### Medical Advice:
+
+**Prompt:** "What should I do to manage my stress levels due to financial issues?"
+![img_9](/images/6/img_9.png?width=90pc)
+
+The model returns a response in the Final response box (that may be modified by the guardrail).
+
+If the guardrail blocks or filters the prompt or model response, a message appears under Guardrail check that informs you how many violations the guardrail detected.
+![img_10](/images/6/img_10.png?width=90pc)
+
+To view the topics or harmful categories in the prompt or response that were recognized and allowed past the filter or blocked by it, select **View trace**. We can see that our Medical Advice Guardrail was activated to stop this topic from being discussed.
+
+Use the **Prompt** and **Model response** tabs to view the topics or harmful categories that were filtered or blocked by the guardrail.
+![img_11](/images/6/img_11.png?width=90pc)

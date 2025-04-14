@@ -12,21 +12,21 @@
     <title>Testing Guardrail :: AWS Serverless</title>
 
     
-    <link href="/css/nucleus.css?1744615639" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1744615639" rel="stylesheet">
-    <link href="/css/hybrid.css?1744615639" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1744615639" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1744615639" rel="stylesheet">
-    <link href="/css/auto-complete.css?1744615639" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1744615639" rel="stylesheet">
-    <link href="/css/theme.css?1744615639" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1744615639" rel="stylesheet">
+    <link href="/css/nucleus.css?1744629301" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1744629301" rel="stylesheet">
+    <link href="/css/hybrid.css?1744629301" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1744629301" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1744629301" rel="stylesheet">
+    <link href="/css/auto-complete.css?1744629301" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1744629301" rel="stylesheet">
+    <link href="/css/theme.css?1744629301" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1744629301" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1744615639" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1744629301" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1744615639"></script>
+    <script src="/js/jquery-3.3.1.min.js?1744629301"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1744615639"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1744615639"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1744629301"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1744629301"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1744615639"></script>
+<script type="text/javascript" src="/js/search.js?1744629301"></script>
 
     
   </div>
@@ -650,7 +650,9 @@
   <ul>
     <li>
       <ul>
-        <li></li>
+        <li><a href="#financial-advice">Financial Advice</a></li>
+        <li><a href="#political-opinions">Political Opinions:</a></li>
+        <li><a href="#medical-advice">Medical Advice:</a></li>
       </ul>
     </li>
   </ul>
@@ -678,51 +680,42 @@
 
 
 
-	<h4 id="khởi-tạo-dynamodb">Khởi tạo DynamoDB</h4>
-<ol>
-<li>
-<p>Truy cập vào
-<a href="https://aws.amazon.com/vi/free/?gclid=CjwKCAjw_ZC2BhAQEiwAXSgClvWbbk-Y8aK5QEAweAN7K8tLmdmvIiZuLvrcXaHfX9HrfLJlZr3U2xoC6y4QAvD_BwE&trk=c4f45c53-585c-4b31-8fbf-d39fbcdc603a&sc_channel=ps&ef_id=CjwKCAjw_ZC2BhAQEiwAXSgClvWbbk-Y8aK5QEAweAN7K8tLmdmvIiZuLvrcXaHfX9HrfLJlZr3U2xoC6y4QAvD_BwE:G:s&s_kwcid=AL!4422!3!637354294239!e!!g!!aws!19043613274!143453611386&all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=*all&awsf.Free%20Tier%20Categories=*all">AWS Management Console</a></p>
-<ul>
-<li>Tìm <strong>DynamoDB</strong></li>
-<li>Chọn <strong>DynamoDB</strong>
-<img alt="01-DynamoDB" src="/images/7/7-dynamodb-01.png?width=90pc"></li>
-</ul>
-</li>
-<li>
-<p>Ở giao diện <strong>Dashboard</strong> của <strong>DynamoDB</strong></p>
-<ul>
-<li>Chọn <strong>Create table</strong>
-<img alt="02-DynamoDB" src="/images/7/7-dynamodb-02.png?width=90pc"></li>
-</ul>
-</li>
-<li>
-<p>Ở giao diện <strong>Create table</strong></p>
-<ul>
-<li>
-<p><strong>Table name</strong> nhập <code>FCJ-DynamoDB</code></p>
-</li>
-<li>
-<p><strong>Partition key</strong> nhập <code>id</code> chọn <strong>string</strong></p>
-</li>
-<li>
-<p><strong>Sort key</strong> nhập <code>name</code> chọn <strong>string</strong>
-<img alt="03-DynamoDB" src="/images/7/7-dynamodb-03.png?width=90pc"></p>
-</li>
-<li>
-<p><strong>Table settings</strong> để mặc định</p>
-</li>
-<li>
-<p>Kéo xuống và chọn <strong>Create table</strong>
-<img alt="04-DynamoDB" src="/images/7/7-dynamodb-04.png?width=90pc"></p>
-</li>
-</ul>
-</li>
-</ol>
-<h4 id="tài-liệu-tham-khảo">Tài liệu tham khảo</h4>
-<ul>
-<li><a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithTables.html">Working with tables and data in DynamoDB</a></li>
-</ul>
+	<p>Let us now test our created Guardrail to see how well it is working and if it is meeting Stellar Bank’s requirements:</p>
+<p>Click on <strong>Bedrock → Guardrails</strong> and choose the Guardrail we created
+<img alt="img" src="/images/6/img.png?width=90pc"></p>
+<p>You will see a screen similar to the below
+<img alt="img_1" src="/images/6/img_1.png?width=90pc"></p>
+<p>By default, the working draft of the guardrail is used in the test window. To test a different version of the guardrail, choose Working draft at the top of the test window and then select the version.</p>
+<p>To select a model, choose <strong>Select model</strong>. You can choose any model that you enabled at the start of the workshop. After you make a choice, select <strong>Apply</strong>. To change the model, choose <strong>Change</strong>.
+<img alt="img_2" src="/images/6/img_2.png?width=90pc"></p>
+<p>Enter the following prompts in the Prompt and click <strong>Run</strong> to see what responses are generated</p>
+<h3 id="financial-advice">Financial Advice</h3>
+<p><strong>Promp:</strong> &ldquo;Can you suggest some good stocks to invest in right now?&rdquo;
+<img alt="img_3" src="/images/6/img_3.png?width=90pc"></p>
+<p>The model returns a response in the Final response box (that may be modified by the guardrail).</p>
+<p>If the guardrail blocks or filters the prompt or model response, a message appears under Guardrail check that informs you how many violations the guardrail detected.
+<img alt="img_4" src="/images/6/img_4.png?width=90pc"></p>
+<p>To view the topics or harmful categories in the prompt or response that were recognized and allowed past the filter or blocked by it, select <strong>View trace</strong>. We can see that our Financial Advice Guardrail was activated to stop this topic from being discussed.</p>
+<p>Use the <strong>Prompt</strong> and <strong>Model response</strong> tabs to view the topics or harmful categories that were filtered or blocked by the guardrail.
+<img alt="img_5" src="/images/6/img_5.png?width=90pc"></p>
+<h3 id="political-opinions">Political Opinions:</h3>
+<p><strong>Prompt:</strong> &ldquo;What&rsquo;s your stance on the current government policies?&rdquo;
+<img alt="img_6" src="/images/6/img_6.png?width=90pc"></p>
+<p>The model returns a response in the Final response box (that may be modified by the guardrail).</p>
+<p>If the guardrail blocks or filters the prompt or model response, a message appears under Guardrail check that informs you how many violations the guardrail detected.
+<img alt="img_7" src="/images/6/img_7.png?width=90pc"></p>
+<p>To view the topics or harmful categories in the prompt or response that were recognized and allowed past the filter or blocked by it, select <strong>View trace</strong>. We can see that our Political Advice Guardrail was activated to stop this topic from being discussed.</p>
+<p>Use the <strong>Prompt</strong> and <strong>Model response</strong> tabs to view the topics or harmful categories that were filtered or blocked by the guardrail.
+<img alt="img_8" src="/images/6/img_8.png?width=90pc"></p>
+<h3 id="medical-advice">Medical Advice:</h3>
+<p><strong>Prompt:</strong> &ldquo;What should I do to manage my stress levels due to financial issues?&rdquo;
+<img alt="img_9" src="/images/6/img_9.png?width=90pc"></p>
+<p>The model returns a response in the Final response box (that may be modified by the guardrail).</p>
+<p>If the guardrail blocks or filters the prompt or model response, a message appears under Guardrail check that informs you how many violations the guardrail detected.
+<img alt="img_10" src="/images/6/img_10.png?width=90pc"></p>
+<p>To view the topics or harmful categories in the prompt or response that were recognized and allowed past the filter or blocked by it, select <strong>View trace</strong>. We can see that our Medical Advice Guardrail was activated to stop this topic from being discussed.</p>
+<p>Use the <strong>Prompt</strong> and <strong>Model response</strong> tabs to view the topics or harmful categories that were filtered or blocked by the guardrail.
+<img alt="img_11" src="/images/6/img_11.png?width=90pc"></p>
 
 
 
@@ -1031,19 +1024,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1744615639"></script>
-    <script src="/js/perfect-scrollbar.min.js?1744615639"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1744615639"></script>
-    <script src="/js/jquery.sticky.js?1744615639"></script>
-    <script src="/js/featherlight.min.js?1744615639"></script>
-    <script src="/js/highlight.pack.js?1744615639"></script>
+    <script src="/js/clipboard.min.js?1744629301"></script>
+    <script src="/js/perfect-scrollbar.min.js?1744629301"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1744629301"></script>
+    <script src="/js/jquery.sticky.js?1744629301"></script>
+    <script src="/js/featherlight.min.js?1744629301"></script>
+    <script src="/js/highlight.pack.js?1744629301"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1744615639"></script>
-    <script src="/js/learn.js?1744615639"></script>
-    <script src="/js/hugo-learn.js?1744615639"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1744629301"></script>
+    <script src="/js/learn.js?1744629301"></script>
+    <script src="/js/hugo-learn.js?1744629301"></script>
 
-    <link href="/mermaid/mermaid.css?1744615639" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1744615639"></script>
+    <link href="/mermaid/mermaid.css?1744629301" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1744629301"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

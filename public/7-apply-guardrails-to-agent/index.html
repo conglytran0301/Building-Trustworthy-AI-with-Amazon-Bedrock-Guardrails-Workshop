@@ -12,21 +12,21 @@
     <title>Apply Guardrails to Agent :: AWS Serverless</title>
 
     
-    <link href="/css/nucleus.css?1744617454" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1744617454" rel="stylesheet">
-    <link href="/css/hybrid.css?1744617454" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1744617454" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1744617454" rel="stylesheet">
-    <link href="/css/auto-complete.css?1744617454" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1744617454" rel="stylesheet">
-    <link href="/css/theme.css?1744617454" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1744617454" rel="stylesheet">
+    <link href="/css/nucleus.css?1744630014" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1744630014" rel="stylesheet">
+    <link href="/css/hybrid.css?1744630014" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1744630014" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1744630014" rel="stylesheet">
+    <link href="/css/auto-complete.css?1744630014" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1744630014" rel="stylesheet">
+    <link href="/css/theme.css?1744630014" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1744630014" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1744617454" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1744630014" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1744617454"></script>
+    <script src="/js/jquery-3.3.1.min.js?1744630014"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1744617454"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1744617454"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1744630014"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1744630014"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1744617454"></script>
+<script type="text/javascript" src="/js/search.js?1744630014"></script>
 
     
   </div>
@@ -646,15 +646,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -678,200 +670,47 @@
 
 
 
-	<h4 id="deploy-lambda-function">Deploy Lambda function</h4>
+	<p>Now that these guardrails has been tested, ABCD Bank can create agents and enforce these guardrails on the same.</p>
 <ol>
 <li>
-<p>Access the
-<a href="https://aws.amazon.com/vi/free/?gclid=CjwKCAjw_ZC2BhAQEiwAXSgClvWbbk-Y8aK5QEAweAN7K8tLmdmvIiZuLvrcXaHfX9HrfLJlZr3U2xoC6y4QAvD_BwE&trk=c4f45c53-585c-4b31-8fbf-d39fbcdc603a&sc_channel=ps&ef_id=CjwKCAjw_ZC2BhAQEiwAXSgClvWbbk-Y8aK5QEAweAN7K8tLmdmvIiZuLvrcXaHfX9HrfLJlZr3U2xoC6y4QAvD_BwE:G:s&s_kwcid=AL!4422!3!637354294239!e!!g!!aws!19043613274!143453611386&all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=*all&awsf.Free%20Tier%20Categories=*all">AWS Management Console</a></p>
-<ul>
-<li>Find <strong>Lambda</strong></li>
-<li>Select <strong>Lambda</strong>
-<img alt="01-Lambda" src="/images/8/8-lambda-01.png?width=90pc"></li>
-</ul>
+<p>Click on Agents under Builder tools from left of the Amazon Bedrock console page.
+<img alt="img" src="/images/7/img.png?width=90pc"></p>
 </li>
 <li>
-<p>In the <strong>Lambda</strong> interface</p>
-<ul>
-<li>Select <strong>Create a function</strong>
-<img alt="02-Lambda" src="/images/8/8-lambda-02.png?width=90pc"></li>
-</ul>
+<p>Click on <strong>&ldquo;Create Agent&rdquo;</strong>
+<img alt="img_1" src="/images/7/img_1.png?width=90pc"></p>
 </li>
 <li>
-<p>In the <strong>Create function</strong> interface</p>
-<ul>
-<li>
-<p>Select <strong>Author from scratch</strong></p>
+<p>(Optional) Change the automatically generated Name for the agent and provide an optional Description for it. Choose <strong>Create</strong>. You will be taken to the Agent builder for your newly created agent, where you can configure your agent.
+<img alt="Agent3" src="/images/7/Agent3.png?width=90pc"></p>
 </li>
 <li>
-<p><strong>Function name</strong> enter <code>FCJ-LambdaFunction</code></p>
+<p>For the Agent resource role, select <strong>&ldquo;Create and use a new service role&rdquo;</strong> to let Amazon Bedrock create the service role and set up the required permissions on your behalf.
+<img alt="img_2" src="/images/7/img_2.png?width=90pc"></p>
 </li>
 <li>
-<p><strong>Runtime</strong> select <strong>Python 3.9</strong></p>
-</li>
-<li>
-<p><strong>Architecture</strong> select <strong>x86_64</strong></p>
-</li>
-<li>
-<p>Scroll down and select <strong>Create function</strong>
-<img alt="03-Lambda" src="/images/8/8-lambda-03.png?width=90pc"></p>
-</li>
-<li>
-<p>Once created, you will see the following interface
-<img alt="04-Lambda" src="/images/8/8-lambda-04.png?width=90pc"></p>
-</li>
-</ul>
-</li>
-<li>
-<p>Enter the Source code for the Lambda Function</p>
-<ul>
-<li>Select <strong>Code</strong></li>
-<li>Paste <strong>code</strong> into the
-<img alt="05-Lambda" src="/images/8/8-lambda-05.png?width=90pc"></li>
-</ul>
-<pre tabindex="0"><code class="language-import" data-lang="import">import boto3
-import uuid
-
-# Tạo tài nguyên DynamoDB
-dynamodb = boto3.resource(&#39;dynamodb&#39;)
-
-# Đặt tên bảng DynamoDB
-table = dynamodb.Table(&#39;FCJ-DynamoDB&#39;)
-
-# Tạo một SNS Client
-client_sns = boto3.client(&#39;sns&#39;)
-
-# Hàm này sẽ được kích hoạt bởi API Gateway
-def lambda_handler(event, context):
-    try:
-        # Kiểm tra sự tồn tại của các key bắt buộc
-        required_keys = [&#39;name&#39;, &#39;email&#39;, &#39;subject&#39;, &#39;description&#39;]
-        for key in required_keys:
-            if key not in event:
-                raise KeyError(f&#34;Missing required key: {key}&#34;)
-
-        # Tạo một ID người dùng
-        id = str(uuid.uuid4())
-
-        # Gửi tin nhắn đến SNS
-        handle_sns(id, event)
-
-        # Lưu trữ dữ liệu vào DynamoDB
-        statusCode = handle_dynamo_db(id, event)
-
-        return {
-            &#39;statusCode&#39;: statusCode,
-        }
-
-    except KeyError as ke:
-        return {
-            &#39;statusCode&#39;: 400,
-            &#39;body&#39;: json.dumps(f&#34;Missing required key: {str(ke)}&#34;)
-        }
-
-    except Exception as e:
-        return {
-            &#39;statusCode&#39;: 500,
-            &#39;body&#39;: json.dumps(&#39;Error occurred: &#39; + str(e))
-        }
-
-# Gửi một tin nhắn đến SNS
-def handle_sns(id, event):
-    try:
-        sns_message = f&#34;&#34;&#34;
-            You got a new Message from https://workshop.conglyblog.id.vn
-            The message is as follows
-
-            id      : {id}
-            Name    : {event[&#39;name&#39;]}
-            email   : {event[&#39;email&#39;]}
-            Message : {event[&#39;description&#39;]}
-            Subject : {event[&#39;subject&#39;]}
-        &#34;&#34;&#34;
-
-        client_sns.publish(
-            # Thay đổi ARN với ARN của SNS của bạn
-            TopicArn=&#39;arn:aws:sns:ap-southeast-1:336760284039:FCJ-SNSTopic&#39;,
-            Message=sns_message,
-            Subject=event[&#39;subject&#39;]
-        )
-
-    except KeyError as ke:
-        print(f&#34;Key error: {ke}&#34;)
-        raise
-
-    except Exception as e:
-        print(f&#34;An error occurred when sending SNS: {e}&#34;)
-        raise
-
-# Thêm một mục vào bảng DynamoDB
-def handle_dynamo_db(id, event):
-    try:
-        response = table.put_item(
-            Item={
-                &#39;id&#39;: id,
-                &#39;name&#39;: event[&#39;name&#39;],
-                &#39;email&#39;: event[&#39;email&#39;],
-                &#39;subject&#39;: event[&#39;subject&#39;],
-                &#39;description&#39;: event[&#39;description&#39;],
-            }
-        )
-        return response[&#39;ResponseMetadata&#39;][&#39;HTTPStatusCode&#39;]
-
-    except Exception as e:
-        print(f&#34;An error occurred when writing to DynamoDB: {e}&#34;)
-        raise
-</code></pre>
-<div class="notices note" ><p>Change this domain name of the code above: &ldquo;You got a new Message from <a href="https://workshop.conglyblog.id.vn">https://workshop.conglyblog.id.vn</a>&rdquo; to your <strong>domain name</strong>.</p>
-</div>
-
-<ul>
-<li>Select <strong>Deploy</strong>
-<img alt="06-Lambda" src="/images/8/8-lambda-06.png?width=90pc"></li>
-</ul>
-</li>
-<li>
-<p>Configure IAM Roles for Lambda</p>
-<ul>
-<li>Select <strong>Configuration</strong></li>
-<li>Select <strong>Permissions</strong></li>
-<li>Redirect to IAM Roles
-<img alt="07-Lambda" src="/images/8/8-lambda-07.png?width=90pc"></li>
-</ul>
-</li>
-<li>
-<p>In the <strong>Permissions</strong> interface</p>
-<ul>
-<li>
-<p>Select <strong>Add permissions</strong></p>
-</li>
-<li>
-<p>Select <strong>Attach policies</strong>
-<img alt="11-Lambda" src="/images/8/8-lambda-11.png?width=90pc"></p>
-</li>
-<li>
-<p>Search for <strong>SNS</strong></p>
-</li>
-<li>
-<p>Select <strong>AmazonSNSFullAccess</strong>
-<img alt="09-Lambda" src="/images/8/8-lambda-09.png?width=90pc"></p>
-</li>
-<li>
-<p>Go ahead, looking for <strong>DynamoDB</strong></p>
-</li>
-<li>
-<p>Select <strong>AmazonDynamoDBFullAccess</strong></p>
-</li>
-<li>
-<p>Select <strong>Add permissions</strong>
-<img alt="10-Lambda" src="/images/8/8-lambda-10.png?width=90pc"></p>
-</li>
-</ul>
+<p>In the <strong>Select Model</strong> you can choose a model for the agent. Refer here to see the supported models for agents. Within the instructions for the agent, provide the following instructions.</p>
 </li>
 </ol>
-<h4 id="reference-links">Reference Links</h4>
-<ul>
-<li><a href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-python.html">Building Lambda functions with Python</a></li>
-</ul>
+<p><em>&ldquo;You are a customer service representative at ABCD Bank, a leading financial institution. You are friendly, professional, and attentive. Your primary responsibilities include assisting customers with their needs, providing information about products and services, addressing customer inquiries, and ensuring a positive customer experience.&rdquo;</em></p>
+<p><img alt="Agent5" src="/images/7/Agent5.png?width=90pc"></p>
+<ol start="6">
+<li>
+<p>Scroll down to the <strong>Guardrails details</strong> section, choose <strong>Edit</strong> to associate our guardrail with the agent.
+<img alt="img_3" src="/images/7/img_3.png?width=90pc"></p>
+</li>
+<li>
+<p>Select our Guardrail and Click on <strong>Save and Exit</strong> to associate our guardrail with the agent. <em>In case you recieve a message of &ldquo;You must save your agent with an Agent Resource Role defined before adding a guardrail&rdquo; then try saving the Agent first before associating the Guardrail</em>
+<img alt="img_4" src="/images/7/img_4.png?width=90pc"></p>
+</li>
+<li>
+<p>Click on <strong>Prepare</strong> the agent in order to test it with our updated configurations in the test window.
+<img alt="img_5" src="/images/7/img_5.png?width=90pc"></p>
+</li>
+<li>
+<p>Now you can test the agent using the same scenarios we selected earlier in the right panel</p>
+</li>
+</ol>
 
 
 
@@ -1180,19 +1019,19 @@ def handle_dynamo_db(id, event):
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1744617454"></script>
-    <script src="/js/perfect-scrollbar.min.js?1744617454"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1744617454"></script>
-    <script src="/js/jquery.sticky.js?1744617454"></script>
-    <script src="/js/featherlight.min.js?1744617454"></script>
-    <script src="/js/highlight.pack.js?1744617454"></script>
+    <script src="/js/clipboard.min.js?1744630014"></script>
+    <script src="/js/perfect-scrollbar.min.js?1744630014"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1744630014"></script>
+    <script src="/js/jquery.sticky.js?1744630014"></script>
+    <script src="/js/featherlight.min.js?1744630014"></script>
+    <script src="/js/highlight.pack.js?1744630014"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1744617454"></script>
-    <script src="/js/learn.js?1744617454"></script>
-    <script src="/js/hugo-learn.js?1744617454"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1744630014"></script>
+    <script src="/js/learn.js?1744630014"></script>
+    <script src="/js/hugo-learn.js?1744630014"></script>
 
-    <link href="/mermaid/mermaid.css?1744617454" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1744617454"></script>
+    <link href="/mermaid/mermaid.css?1744630014" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1744630014"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

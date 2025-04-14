@@ -60,21 +60,21 @@
 	"title": "Denied Topic - Financial Advice",
 	"tags": [],
 	"description": "",
-	"content": " On the Add Denied Topics Section - Click Add Denied Topic Enter the following information into the Guardrail Name: Financial Advice\nDefinition For Topic: Discussions that involve providing guidance, recommendations, or suggestions related to managing, investing, or handling finances, investments, or assets.\nSample Phrases:\nCan you suggest some good stocks to invest in right now ? What\u0026rsquo;s the best way to save for retirement ? Should I put my money in a high-risk investment ? How can I maximize my returns on investments ? Is it a good time to buy real estate ? Once field are completed, click on Confirm to create the denied topic "
+	"content": " On the Add Denied Topics Section - Click Add Denied Topic Enter the following information into the Guardrail\nName: Financial Advice\nDefinition For Topic: Discussions that involve providing guidance, recommendations, or suggestions related to managing, investing, or handling finances, investments, or assets.\nSample Phrases:\nCan you suggest some good stocks to invest in right now ? What\u0026rsquo;s the best way to save for retirement ? Should I put my money in a high-risk investment ? How can I maximize my returns on investments ? Is it a good time to buy real estate ? Once field are completed, click on Confirm to create the denied topic "
 },
 {
 	"uri": "//localhost:1313/vi/4-creating-denied-topics/3-denied-topic---medical-advice/",
 	"title": "Denied Topic - Medical Advice",
 	"tags": [],
 	"description": "",
-	"content": " On the Add Denied Topics Section - Click Add Denied Topic Enter the following information into the Guardrail Name: Political Advice\nDefinition For Topic: Conversations that express views, opinions, or endorsements related to political parties, political ideologies, elections, or political figures.\nSample Phrases:\nWhat\u0026rsquo;s your stance on the current government policies ? Do you support party X or Y in the upcoming election ? Can you tell me which political party is better ? What do you think about the new policy introduced by the president ? Should I vote for this candidate ? Click on Confirm to create the denied topic "
+	"content": " On the Add Denied Topics Section - Click Add Denied Topic Enter the following information into the Guardrail\nName: Medical Advice\nDefinition For Topic: Discussions that involve providing guidance, recommendations, or suggestions related to health, medical treatments, symptoms, or overall wellness\nSample Phrases:\nWhat are the best ways to manage chronic pain ? Can you recommend a good diet for heart health ? What should I do if I have persistent headaches ? Is it safe to combine these medications ? How can I improve my mental well-being ? Click on Confirm to create the denied topic and click Next "
 },
 {
 	"uri": "//localhost:1313/vi/4-creating-denied-topics/2-denied-topic---political-advice/",
 	"title": "Denied Topic - Political Advice",
 	"tags": [],
 	"description": "",
-	"content": ""
+	"content": " On the Add Denied Topics Section - Click Add Denied Topic Enter the following information into the Guardrail\nName: Political Advice\nDefinition For Topic: Conversations that express views, opinions, or endorsements related to political parties, political ideologies, elections, or political figures.\nSample Phrases:\nWhat\u0026rsquo;s your stance on the current government policies ? Do you support party X or Y in the upcoming election ? Can you tell me which political party is better ? What do you think about the new policy introduced by the president ? Should I vote for this candidate ? Click on Confirm to create the denied topic "
 },
 {
 	"uri": "//localhost:1313/vi/5-add-filters-to-guardrail/",
