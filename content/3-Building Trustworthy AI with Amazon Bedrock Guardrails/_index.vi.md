@@ -1,5 +1,5 @@
 +++
-title = "Building Trustworthy AI with Amazon Bedrock Guardrails"
+title = "Amazon Bedrock Guardrails"
 date = 2020-05-14T00:38:32+07:00
 weight = 3
 chapter = false

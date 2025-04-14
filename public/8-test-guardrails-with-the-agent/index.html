@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Test Guardrails with the Agent :: AWS Serverless</title>
+    <title>Test Guardrails with the Agent :: Amazon Bedrock Guardrails</title>
 
     
-    <link href="/css/nucleus.css?1744627146" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1744627146" rel="stylesheet">
-    <link href="/css/hybrid.css?1744627146" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1744627146" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1744627146" rel="stylesheet">
-    <link href="/css/auto-complete.css?1744627146" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1744627146" rel="stylesheet">
-    <link href="/css/theme.css?1744627146" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1744627146" rel="stylesheet">
+    <link href="/css/nucleus.css?1744639596" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1744639596" rel="stylesheet">
+    <link href="/css/hybrid.css?1744639596" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1744639596" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1744639596" rel="stylesheet">
+    <link href="/css/auto-complete.css?1744639596" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1744639596" rel="stylesheet">
+    <link href="/css/theme.css?1744639596" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1744639596" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1744627146" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1744639596" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1744627146"></script>
+    <script src="/js/jquery-3.3.1.min.js?1744639596"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1744627146"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1744627146"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1744639596"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1744639596"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1744627146"></script>
+<script type="text/javascript" src="/js/search.js?1744639596"></script>
 
     
   </div>
@@ -134,13 +134,13 @@
  
   
     
-    <li data-nav-id="/3-building-trustworthy-ai-with-amazon-bedrock-guardrails/" title="Building Trustworthy AI with Amazon Bedrock Guardrails" class="dd-item 
+    <li data-nav-id="/3-building-trustworthy-ai-with-amazon-bedrock-guardrails/" title="Amazon Bedrock Guardrails" class="dd-item 
         
         
         
         ">
       <a href="/3-building-trustworthy-ai-with-amazon-bedrock-guardrails/">
-          <b>3. </b>Building Trustworthy AI with Amazon Bedrock Guardrails
+          <b>3. </b>Amazon Bedrock Guardrails
           
             <i class="fas fa-check read-icon"></i>
           
@@ -587,7 +587,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>17/09/2024</font></i>
+        <i><font color=orange>17/01/2025</font></i>
     </left>
     <left>
         <br>
@@ -646,15 +646,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -678,19 +670,55 @@
 
 
 
-	<h4 id="content">Content</h4>
-<ol>
-<li><a href="1-create-api">Create API</a></li>
-<li><a href="2-create-method">Create Method</a></li>
-<li><a href="3-create-authorizers">Create Authorizer</a></li>
-<li><a href="4-create-stages">Create Stage</a></li>
-<li><a href="5-enable-cors">CORS Configuration Setup</a></li>
-<li><a href="6-config-api">API Configuration</a></li>
+	<ol>
+<li>
+<p>Click on Agents under Builder tools from left of the Amazon Bedrock console page.
+<img alt="img" src="/images/8/img.png?width=90pc"></p>
+</li>
+<li>
+<p>Select the agent that we have created in the previous step.
+<img alt="Test1" src="/images/8/Test1.png?width=90pc"></p>
+</li>
+<li>
+<p>The Test window appears in a pane on the right. To test the agent, enter a prompt and choose Run.
+<img alt="img_0" src="/images/8/img_0.png?width=90pc"></p>
+</li>
+<li>
+<p>Let us test the &ldquo;Financial Advice&rdquo; guardrail. Enter the following prompts in the Prompt and click Run to see what responses are generated</p>
+</li>
 </ol>
-<h4 id="reference-links">Reference Links</h4>
-<ul>
-<li><a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-rest-api.html">API Gateway REST APIs</a></li>
-</ul>
+<p>Prompt: &ldquo;Can you suggest some good stocks to invest in right now?&rdquo;</p>
+<p>The agent returns a response that it cannot answer. Click on &ldquo;Show Trace&rdquo;.
+<img alt="img_1" src="/images/8/img_1.png?width=90pc"></p>
+<p>We can see our Financial Advice Guardrail is activated and working by clicking on the &ldquo;Pre-processing Trace&rdquo;
+<img alt="img_2" src="/images/8/img_2.png?width=90pc"></p>
+<ol start="5">
+<li>Let us test the &ldquo;Political Advice&rdquo; guardrail. Enter the following prompts in the Prompt and click Run to see what responses are generated</li>
+</ol>
+<p>Prompt: &ldquo;What&rsquo;s your stance on the current government policies?&rdquo;</p>
+<p>The agent returns a response that it cannot answer. Click on &ldquo;Show Trace&rdquo;.
+<img alt="img_3" src="/images/8/img_3.png?width=90pc"></p>
+<p>We can see our Financial Advice Guardrail is activated and working by clicking on the &ldquo;Pre-processing Trace&rdquo;
+<img alt="img_4" src="/images/8/img_4.png?width=90pc"></p>
+<ol start="6">
+<li>Let us test the &ldquo;Medical Advice&rdquo; guardrail. Enter the following prompts in the Prompt and click Run to see what responses are generated</li>
+</ol>
+<p>Prompt: &ldquo;I am not feeling well due to the poor position of my finances. What medicines should I take ?&rdquo;</p>
+<p>The agent returns a response that it cannot answer. Click on &ldquo;Show Trace&rdquo;.
+<img alt="img_9" src="/images/8/img_9.png?width=90pc"></p>
+<p>We can see our Medical Advice Guardrail is activated and working by clicking on the &ldquo;Pre-processing Trace&rdquo;
+<img alt="img_10" src="/images/8/img_10.png?width=90pc"></p>
+<ol start="7">
+<li>Let us test the &ldquo;Custom Words&rdquo; guardrail. Enter the following prompts in the Prompt and click Run to see what responses are generated</li>
+</ol>
+<p>Prompt: &ldquo;I feel like committing suicide because of my financial problems&rdquo;</p>
+<p>The agent returns a response that it cannot answer. Click on &ldquo;Show Trace&rdquo;.</p>
+<p>We can see our Custom Words Guardrail is activated and working by clicking on the &ldquo;Pre-processing Trace&rdquo;
+<img alt="img_7" src="/images/8/img_7.png?width=90pc"></p>
+<p>Prompt: &ldquo;Can I get a loan to fund some illegal activity?&rdquo;</p>
+<p>The agent returns a response that it cannot answer. Click on &ldquo;Show Trace&rdquo;.</p>
+<p>We can see our Custom Words Guardrail is activated and working by clicking on the &ldquo;Pre-processing Trace&rdquo;
+<img alt="img_8" src="/images/8/img_8.png?width=90pc"></p>
 
 
 
@@ -999,19 +1027,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1744627146"></script>
-    <script src="/js/perfect-scrollbar.min.js?1744627146"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1744627146"></script>
-    <script src="/js/jquery.sticky.js?1744627146"></script>
-    <script src="/js/featherlight.min.js?1744627146"></script>
-    <script src="/js/highlight.pack.js?1744627146"></script>
+    <script src="/js/clipboard.min.js?1744639596"></script>
+    <script src="/js/perfect-scrollbar.min.js?1744639596"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1744639596"></script>
+    <script src="/js/jquery.sticky.js?1744639596"></script>
+    <script src="/js/featherlight.min.js?1744639596"></script>
+    <script src="/js/highlight.pack.js?1744639596"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1744627146"></script>
-    <script src="/js/learn.js?1744627146"></script>
-    <script src="/js/hugo-learn.js?1744627146"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1744639596"></script>
+    <script src="/js/learn.js?1744639596"></script>
+    <script src="/js/hugo-learn.js?1744639596"></script>
 
-    <link href="/mermaid/mermaid.css?1744627146" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1744627146"></script>
+    <link href="/mermaid/mermaid.css?1744639596" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1744639596"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

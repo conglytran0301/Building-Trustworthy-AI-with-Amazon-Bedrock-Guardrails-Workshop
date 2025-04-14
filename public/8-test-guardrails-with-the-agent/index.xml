@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Test Guardrails with the Agent on AWS Serverless</title>
+    <title>Test Guardrails with the Agent on Amazon Bedrock Guardrails</title>
     <link>//localhost:1313/8-test-guardrails-with-the-agent/</link>
-    <description>Recent content in Test Guardrails with the Agent on AWS Serverless</description>
+    <description>Recent content in Test Guardrails with the Agent on Amazon Bedrock Guardrails</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate></lastBuildDate>
