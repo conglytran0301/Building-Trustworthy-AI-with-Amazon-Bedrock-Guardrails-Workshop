@@ -15,17 +15,17 @@
                 href="//localhost:1313/1-introduction/"
                 />
   </url><url>
-    <loc>//localhost:1313/3-building-trustworthy-ai-with-amazon-bedrock-guardrails/1-overview/</loc>
+    <loc>//localhost:1313/3-amazon-bedrock-guardrails/1-overview/</loc>
     <lastmod>2020-05-14T00:38:32+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/3-building-trustworthy-ai-with-amazon-bedrock-guardrails/1-overview/"
+                href="//localhost:1313/vi/3-amazon-bedrock-guardrails/1-overview/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/3-building-trustworthy-ai-with-amazon-bedrock-guardrails/1-overview/"
+                href="//localhost:1313/3-amazon-bedrock-guardrails/1-overview/"
                 />
   </url><url>
     <loc>//localhost:1313/</loc>
@@ -41,17 +41,17 @@
                 href="//localhost:1313/"
                 />
   </url><url>
-    <loc>//localhost:1313/3-building-trustworthy-ai-with-amazon-bedrock-guardrails/2-creating-the-guardrail/</loc>
+    <loc>//localhost:1313/3-amazon-bedrock-guardrails/2-creating-the-guardrail/</loc>
     <lastmod>2020-05-14T00:38:32+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/3-building-trustworthy-ai-with-amazon-bedrock-guardrails/2-creating-the-guardrail/"
+                href="//localhost:1313/vi/3-amazon-bedrock-guardrails/2-creating-the-guardrail/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/3-building-trustworthy-ai-with-amazon-bedrock-guardrails/2-creating-the-guardrail/"
+                href="//localhost:1313/3-amazon-bedrock-guardrails/2-creating-the-guardrail/"
                 />
   </url><url>
     <loc>//localhost:1313/2-getting-started/</loc>
@@ -67,30 +67,30 @@
                 href="//localhost:1313/2-getting-started/"
                 />
   </url><url>
-    <loc>//localhost:1313/3-building-trustworthy-ai-with-amazon-bedrock-guardrails/</loc>
+    <loc>//localhost:1313/3-amazon-bedrock-guardrails/</loc>
     <lastmod>2020-05-14T00:38:32+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/3-building-trustworthy-ai-with-amazon-bedrock-guardrails/"
+                href="//localhost:1313/vi/3-amazon-bedrock-guardrails/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/3-building-trustworthy-ai-with-amazon-bedrock-guardrails/"
+                href="//localhost:1313/3-amazon-bedrock-guardrails/"
                 />
   </url><url>
-    <loc>//localhost:1313/3-building-trustworthy-ai-with-amazon-bedrock-guardrails/3-configure-the-threshold/</loc>
+    <loc>//localhost:1313/3-amazon-bedrock-guardrails/3-configure-the-threshold/</loc>
     <lastmod>2020-05-14T00:38:32+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/3-building-trustworthy-ai-with-amazon-bedrock-guardrails/3-configure-the-threshold/"
+                href="//localhost:1313/vi/3-amazon-bedrock-guardrails/3-configure-the-threshold/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/3-building-trustworthy-ai-with-amazon-bedrock-guardrails/3-configure-the-threshold/"
+                href="//localhost:1313/3-amazon-bedrock-guardrails/3-configure-the-threshold/"
                 />
   </url><url>
     <loc>//localhost:1313/4-creating-denied-topics/</loc>

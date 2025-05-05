@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Building Trustworthy AI with Amazon Bedrock Guardrails :: Amazon Bedrock Guardrails</title>
+    <title>Overview :: Amazon Bedrock Guardrails</title>
 
     
     <link href="/css/nucleus.css?1746416299" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/vi/">
+  <body class="" data-url="/vi/3-amazon-bedrock-guardrails/1-overview/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -135,7 +135,7 @@
   
     
     <li data-nav-id="/vi/3-amazon-bedrock-guardrails/" title="Amazon Bedrock Guardrails" class="dd-item 
-        
+        parent
         
         
         ">
@@ -167,7 +167,7 @@
     
     <li data-nav-id="/vi/3-amazon-bedrock-guardrails/1-overview/" title="Overview" class="dd-item 
         
-        
+        active
         
         ">
       <a href="/vi/3-amazon-bedrock-guardrails/1-overview/">
@@ -535,7 +535,7 @@
                   
                     
                     
-                      <option id="en" value="//localhost:1313/">English</option>
+                      <option id="en" value="//localhost:1313/3-amazon-bedrock-guardrails/1-overview/">English</option>
                     
                   
               
@@ -549,7 +549,7 @@
                   
                     
                     
-                      <option id="vi" value="//localhost:1313/vi/" selected>Tiếng Việt</option>
+                      <option id="vi" value="//localhost:1313/vi/3-amazon-bedrock-guardrails/1-overview/" selected>Tiếng Việt</option>
                     
                   
               
@@ -612,38 +612,122 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/vi/'>Building Trustworthy AI with Amazon Bedrock Guardrails</a> > <a href='/vi/3-amazon-bedrock-guardrails/'>Amazon Bedrock Guardrails</a> > Overview
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
         </div>
         
         <div id="body-inner">
           
+            <h1>
+              
+              Overview
+            </h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
- 
-<h1 id="building-trustworthy-ai-with-amazon-bedrock-guardrails">Building Trustworthy AI with Amazon Bedrock Guardrails</h1>
-<h3 id="workshop-overview">Workshop Overview</h3>
-<h4 id="guardrails-for-amazon-bedrock">Guardrails for Amazon Bedrock</h4>
-<p><img alt="Guardrails" src="/images/1/Guardrails.png?width=90pc"></p>
-<h4 id="objectives-of-the-workshop">Objectives of the Workshop</h4>
-<p>In this workshop, you&rsquo;ll explore how to set up and configure Amazon Bedrock Guardrails through a hands-on sample scenario.</p>
-<p>Amazon Bedrock Guardrails empowers you to establish policies that help protect your generative AI applications from producing or interacting with unsafe content. With Guardrails, you can tailor content moderation rules to meet the specific needs of your application.</p>
-<p>You’ll be able to configure two key types of safeguards:</p>
+
+	<h4 id="1---define-the-guardrails">1 - Define the Guardrails</h4>
+<p>Identify the specific needs of your customer service, like topics to avoid and content to filter. For instance, blocking discussions on investment advice in a tech support chat.</p>
+<h4 id="2---configure-content-filters">2 - Configure Content Filters</h4>
+<p>Set thresholds for different content categories based on the level of strictness required. Below are the thresholds that Amazon Bedrock Guardrails provide for both prompts and respnoses.</p>
 <ul>
 <li>
-<p><strong>Denied Topics:</strong> Specify topics that should be restricted in your application. For instance, a virtual assistant for online banking can be configured to avoid giving investment advice.</p>
+<p><strong>Hate:</strong> Describes input prompts and model responses that discriminate, criticize, insult, denounce, or dehumanize a person or group on the basis of an identity (such as race, ethnicity, gender, religion, sexual orientation, ability, and national origin).</p>
 </li>
 <li>
-<p><strong>Content Filters:</strong> Set sensitivity thresholds to detect and block potentially harmful content in categories such as hate speech, insults, sexually explicit material, and violence.</p>
+<p><strong>Insults:</strong> Describes input prompts and model responses that includes demeaning, humiliating, mocking, insulting, or belittling language. This type of language is also labeled as bullying.</p>
+</li>
+<li>
+<p><strong>Sexual:</strong> Describes input prompts and model responses that indicates sexual interest, activity, or arousal using direct or indirect references to body parts, physical traits, or sex.</p>
+</li>
+<li>
+<p><strong>Violence:</strong> Describes input prompts and model responses that includes glorification of or threats to inflict physical pain, hurt, or injury toward a person, group or thing.</p>
+</li>
+<li>
+<p><strong>Misconduct:</strong> Describes input prompts and model responses that seeks or provides information about engaging in criminal activity, or harming, defrauding, or taking advantage of a person, group or institution.</p>
+</li>
+<li>
+<p><strong>Prompt Attack:</strong> Describes user prompts intended to bypass the safety and moderation capabilities of a foundation model (FM) in order to generate harmful content (also known as jailbreak), and ignore and override instructions specified by the developer (referred to as prompt injection).
+<img alt="ContentFilters" src="/images/3/ContentFilters.png?width=90pc"></p>
 </li>
 </ul>
+<h4 id="3---add-denied-topics">3 - Add Denied Topics</h4>
+<p>Add denied topics based on what was defined in step 1. Guardrails can be configured with a set of denied topics that are undesirable in the context of your AI application. You can define up to 30 denied topics. Input prompts and model completions will be evaluated against each of these denied topics. If one of the denied topics is detected, the blocked message configured as part of the guardrail will be returned to the user.
+<img alt="DeniedTopic" src="/images/3/DeniedTopic.png?width=90pc"></p>
+<h4 id="4---implement-guardrails">4 - Implement Guardrails</h4>
+<p>Enforce Guardrails within Amazon Bedrock</p>
+<h4 id="5---test-and-fine-tune">5 - Test and Fine tune</h4>
+<p>Check if the guardrails are working properly through test cases and inputs.</p>
+<h4 id="6---enforce-guadrails-on-agent">6 - Enforce Guadrails on Agent</h4>
+<p>Regularly review the performance of Guardrails and make necessary adjustments to the configurations.</p>
+<p>Let us get started in the next lesson with creating our Guardrails.</p>
+
+
+
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -710,6 +794,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -724,6 +809,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -740,6 +826,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -926,8 +1015,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/vi/3-amazon-bedrock-guardrails/" title="Amazon Bedrock Guardrails"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/vi/1-introduction/" title="Introduction" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/vi/3-amazon-bedrock-guardrails/2-creating-the-guardrail/" title="Creating The Guardrail" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -965,4 +1056,3 @@
 </script>
   </body>
 </html>
-

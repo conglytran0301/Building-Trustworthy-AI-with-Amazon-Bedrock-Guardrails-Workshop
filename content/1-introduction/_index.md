@@ -25,3 +25,13 @@ By the end of this workshop, you'll be equipped with the knowledge to:
 #### Pricing for This Workshop
 
 ![Pricing](/images/1/Pricing.png?width=90pc)
+
+Amazon Bedrock pricing: https://aws.amazon.com/bedrock/pricing/
+
+#### References
+
+{{< youtube l7pKj3G1Kyw >}}
+
+- [Secure Your AI Apps: Step-by-Step Guide to Amazon Bedrock Guardrails](https://youtu.be/l7pKj3G1Kyw?si=TEMNOVpcb0-XWRIm)
+
+- [Learn more: Amazon Bedrock Guardrails](https://aws.amazon.com/bedrock/guardrails/)

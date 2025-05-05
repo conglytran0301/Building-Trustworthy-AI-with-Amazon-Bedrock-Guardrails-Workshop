@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi" class="js csstransforms3d">
+<html lang="en" class="js csstransforms3d">
   <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Building Trustworthy AI with Amazon Bedrock Guardrails :: Amazon Bedrock Guardrails</title>
+    <title>Creating The Guardrail :: Amazon Bedrock Guardrails</title>
 
     
-    <link href="/css/nucleus.css?1746416299" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1746416299" rel="stylesheet">
-    <link href="/css/hybrid.css?1746416299" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1746416299" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1746416299" rel="stylesheet">
-    <link href="/css/auto-complete.css?1746416299" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1746416299" rel="stylesheet">
-    <link href="/css/theme.css?1746416299" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1746416299" rel="stylesheet">
+    <link href="/css/nucleus.css?1746416297" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1746416297" rel="stylesheet">
+    <link href="/css/hybrid.css?1746416297" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1746416297" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1746416297" rel="stylesheet">
+    <link href="/css/auto-complete.css?1746416297" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1746416297" rel="stylesheet">
+    <link href="/css/theme.css?1746416297" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1746416297" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1746416299" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1746416297" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1746416299"></script>
+    <script src="/js/jquery-3.3.1.min.js?1746416297"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/vi/">
+  <body class="" data-url="/3-amazon-bedrock-guardrails/2-creating-the-guardrail/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1746416299"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1746416299"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1746416297"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1746416297"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/localhost:1313\/\/vi";
+        var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1746416299"></script>
+<script type="text/javascript" src="/js/search.js?1746416297"></script>
 
     
   </div>
@@ -82,12 +82,12 @@
  
   
     
-    <li data-nav-id="/vi/1-introduction/" title="Introduction" class="dd-item 
+    <li data-nav-id="/1-introduction/" title="Introduction" class="dd-item 
         
         
         
         ">
-      <a href="/vi/1-introduction/">
+      <a href="/1-introduction/">
           <b>1. </b>Introduction
           
             <i class="fas fa-check read-icon"></i>
@@ -108,12 +108,12 @@
  
   
     
-    <li data-nav-id="/vi/2-getting-started/" title="Getting Started" class="dd-item 
+    <li data-nav-id="/2-getting-started/" title="Getting Started" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-getting-started/">
+      <a href="/2-getting-started/">
           <b>2. </b>Getting Started
           
             <i class="fas fa-check read-icon"></i>
@@ -134,12 +134,12 @@
  
   
     
-    <li data-nav-id="/vi/3-amazon-bedrock-guardrails/" title="Amazon Bedrock Guardrails" class="dd-item 
-        
+    <li data-nav-id="/3-amazon-bedrock-guardrails/" title="Amazon Bedrock Guardrails" class="dd-item 
+        parent
         
         
         ">
-      <a href="/vi/3-amazon-bedrock-guardrails/">
+      <a href="/3-amazon-bedrock-guardrails/">
           <b>3. </b>Amazon Bedrock Guardrails
           
             <i class="fas fa-check read-icon"></i>
@@ -165,12 +165,12 @@
  
   
     
-    <li data-nav-id="/vi/3-amazon-bedrock-guardrails/1-overview/" title="Overview" class="dd-item 
+    <li data-nav-id="/3-amazon-bedrock-guardrails/1-overview/" title="Overview" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-amazon-bedrock-guardrails/1-overview/">
+      <a href="/3-amazon-bedrock-guardrails/1-overview/">
           <b>3.1 </b>Overview
           
             <i class="fas fa-check read-icon"></i>
@@ -193,12 +193,12 @@
  
   
     
-    <li data-nav-id="/vi/3-amazon-bedrock-guardrails/2-creating-the-guardrail/" title="Creating The Guardrail" class="dd-item 
+    <li data-nav-id="/3-amazon-bedrock-guardrails/2-creating-the-guardrail/" title="Creating The Guardrail" class="dd-item 
         
-        
+        active
         
         ">
-      <a href="/vi/3-amazon-bedrock-guardrails/2-creating-the-guardrail/">
+      <a href="/3-amazon-bedrock-guardrails/2-creating-the-guardrail/">
           <b>3.2 </b>Creating The Guardrail
           
             <i class="fas fa-check read-icon"></i>
@@ -221,12 +221,12 @@
  
   
     
-    <li data-nav-id="/vi/3-amazon-bedrock-guardrails/3-configure-the-threshold/" title="Configure The Threshold" class="dd-item 
+    <li data-nav-id="/3-amazon-bedrock-guardrails/3-configure-the-threshold/" title="Configure The Threshold" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-amazon-bedrock-guardrails/3-configure-the-threshold/">
+      <a href="/3-amazon-bedrock-guardrails/3-configure-the-threshold/">
           <b>3.3 </b>Configure The Threshold
           
             <i class="fas fa-check read-icon"></i>
@@ -256,12 +256,12 @@
  
   
     
-    <li data-nav-id="/vi/4-creating-denied-topics/" title="Creating Denied Topics" class="dd-item 
+    <li data-nav-id="/4-creating-denied-topics/" title="Creating Denied Topics" class="dd-item 
         
         
         
         ">
-      <a href="/vi/4-creating-denied-topics/">
+      <a href="/4-creating-denied-topics/">
           <b>4. </b>Creating Denied Topics
           
             <i class="fas fa-check read-icon"></i>
@@ -287,12 +287,12 @@
  
   
     
-    <li data-nav-id="/vi/4-creating-denied-topics/1-denied-topic---financial-advice/" title="Denied Topic - Financial Advice" class="dd-item 
+    <li data-nav-id="/4-creating-denied-topics/1-denied-topic---financial-advice/" title="Denied Topic - Financial Advice" class="dd-item 
         
         
         
         ">
-      <a href="/vi/4-creating-denied-topics/1-denied-topic---financial-advice/">
+      <a href="/4-creating-denied-topics/1-denied-topic---financial-advice/">
           <b>4.1 </b>Denied Topic - Financial Advice
           
             <i class="fas fa-check read-icon"></i>
@@ -315,12 +315,12 @@
  
   
     
-    <li data-nav-id="/vi/4-creating-denied-topics/3-denied-topic---medical-advice/" title="Denied Topic - Medical Advice" class="dd-item 
+    <li data-nav-id="/4-creating-denied-topics/3-denied-topic---medical-advice/" title="Denied Topic - Medical Advice" class="dd-item 
         
         
         
         ">
-      <a href="/vi/4-creating-denied-topics/3-denied-topic---medical-advice/">
+      <a href="/4-creating-denied-topics/3-denied-topic---medical-advice/">
           <b>4.3 </b>Denied Topic - Medical Advice
           
             <i class="fas fa-check read-icon"></i>
@@ -343,12 +343,12 @@
  
   
     
-    <li data-nav-id="/vi/4-creating-denied-topics/2-denied-topic---political-advice/" title="Denied Topic - Political Advice" class="dd-item 
+    <li data-nav-id="/4-creating-denied-topics/2-denied-topic---political-advice/" title="Denied Topic - Political Advice" class="dd-item 
         
         
         
         ">
-      <a href="/vi/4-creating-denied-topics/2-denied-topic---political-advice/">
+      <a href="/4-creating-denied-topics/2-denied-topic---political-advice/">
           <b>4.2 </b>Denied Topic - Political Advice
           
             <i class="fas fa-check read-icon"></i>
@@ -378,12 +378,12 @@
  
   
     
-    <li data-nav-id="/vi/5-add-filters-to-guardrail/" title="Add filters to Guardrail" class="dd-item 
+    <li data-nav-id="/5-add-filters-to-guardrail/" title="Add filters to Guardrail" class="dd-item 
         
         
         
         ">
-      <a href="/vi/5-add-filters-to-guardrail/">
+      <a href="/5-add-filters-to-guardrail/">
           <b>5. </b>Add filters to Guardrail
           
             <i class="fas fa-check read-icon"></i>
@@ -404,12 +404,12 @@
  
   
     
-    <li data-nav-id="/vi/6-testing-guardrail/" title="Testing Guardrail" class="dd-item 
+    <li data-nav-id="/6-testing-guardrail/" title="Testing Guardrail" class="dd-item 
         
         
         
         ">
-      <a href="/vi/6-testing-guardrail/">
+      <a href="/6-testing-guardrail/">
           <b>6. </b>Testing Guardrail
           
             <i class="fas fa-check read-icon"></i>
@@ -430,12 +430,12 @@
  
   
     
-    <li data-nav-id="/vi/7-apply-guardrails-to-agent/" title="Apply Guardrails to Agent" class="dd-item 
+    <li data-nav-id="/7-apply-guardrails-to-agent/" title="Apply Guardrails to Agent" class="dd-item 
         
         
         
         ">
-      <a href="/vi/7-apply-guardrails-to-agent/">
+      <a href="/7-apply-guardrails-to-agent/">
           <b>7. </b>Apply Guardrails to Agent
           
             <i class="fas fa-check read-icon"></i>
@@ -456,12 +456,12 @@
  
   
     
-    <li data-nav-id="/vi/8-test-guardrails-with-the-agent/" title="Test Guardrails with the Agent" class="dd-item 
+    <li data-nav-id="/8-test-guardrails-with-the-agent/" title="Test Guardrails with the Agent" class="dd-item 
         
         
         
         ">
-      <a href="/vi/8-test-guardrails-with-the-agent/">
+      <a href="/8-test-guardrails-with-the-agent/">
           <b>8. </b>Test Guardrails with the Agent
           
             <i class="fas fa-check read-icon"></i>
@@ -482,13 +482,13 @@
  
   
     
-    <li data-nav-id="/vi/9-clean-resource/" title="Dọn dẹp tài nguyên" class="dd-item 
+    <li data-nav-id="/9-clean-resource/" title="Clean up resources" class="dd-item 
         
         
         
         ">
-      <a href="/vi/9-clean-resource/">
-          <b>9. </b>Dọn dẹp tài nguyên
+      <a href="/9-clean-resource/">
+          <b>9. </b>Clean up resources
           
             <i class="fas fa-check read-icon"></i>
           
@@ -535,7 +535,7 @@
                   
                     
                     
-                      <option id="en" value="//localhost:1313/">English</option>
+                      <option id="en" value="//localhost:1313/3-amazon-bedrock-guardrails/2-creating-the-guardrail/" selected>English</option>
                     
                   
               
@@ -549,7 +549,7 @@
                   
                     
                     
-                      <option id="vi" value="//localhost:1313/vi/" selected>Tiếng Việt</option>
+                      <option id="vi" value="//localhost:1313/vi/3-amazon-bedrock-guardrails/2-creating-the-guardrail/">Tiếng Việt</option>
                     
                   
               
@@ -612,38 +612,93 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Building Trustworthy AI with Amazon Bedrock Guardrails</a> > <a href='/3-amazon-bedrock-guardrails/'>Amazon Bedrock Guardrails</a> > Creating The Guardrail
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents"></nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
         </div>
         
         <div id="body-inner">
           
+            <h1>
+              
+              Creating The Guardrail
+            </h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
- 
-<h1 id="building-trustworthy-ai-with-amazon-bedrock-guardrails">Building Trustworthy AI with Amazon Bedrock Guardrails</h1>
-<h3 id="workshop-overview">Workshop Overview</h3>
-<h4 id="guardrails-for-amazon-bedrock">Guardrails for Amazon Bedrock</h4>
-<p><img alt="Guardrails" src="/images/1/Guardrails.png?width=90pc"></p>
-<h4 id="objectives-of-the-workshop">Objectives of the Workshop</h4>
-<p>In this workshop, you&rsquo;ll explore how to set up and configure Amazon Bedrock Guardrails through a hands-on sample scenario.</p>
-<p>Amazon Bedrock Guardrails empowers you to establish policies that help protect your generative AI applications from producing or interacting with unsafe content. With Guardrails, you can tailor content moderation rules to meet the specific needs of your application.</p>
-<p>You’ll be able to configure two key types of safeguards:</p>
-<ul>
+
+	<ol>
 <li>
-<p><strong>Denied Topics:</strong> Specify topics that should be restricted in your application. For instance, a virtual assistant for online banking can be configured to avoid giving investment advice.</p>
+<p>Go to Amazon Bedrock console, then click on <strong>Safeguards &gt; Guardrails</strong> from the left pane
+<img alt="CreateGuardrail" src="/images/3/CreateGuardrail.png?width=90pc"></p>
 </li>
 <li>
-<p><strong>Content Filters:</strong> Set sensitivity thresholds to detect and block potentially harmful content in categories such as hate speech, insults, sexually explicit material, and violence.</p>
+<p>Click on <strong>Create guardrails</strong>
+<img alt="GuardrailDetail" src="/images/3/GuardrailDetail.png?width=90pc"></p>
 </li>
-</ul>
+<li>
+<p>Enter the following details and click <strong>Next</strong>
+<img alt="CreateGuardrail_1" src="/images/3/CreateGuardrail_1.png?width=90pc"></p>
+</li>
+</ol>
+
+
+
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -710,6 +765,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -724,6 +780,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -741,6 +800,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -756,6 +816,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -926,8 +989,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/3-amazon-bedrock-guardrails/1-overview/" title="Overview"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/vi/1-introduction/" title="Introduction" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/3-amazon-bedrock-guardrails/3-configure-the-threshold/" title="Configure The Threshold" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -937,19 +1002,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1746416299"></script>
-    <script src="/js/perfect-scrollbar.min.js?1746416299"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1746416299"></script>
-    <script src="/js/jquery.sticky.js?1746416299"></script>
-    <script src="/js/featherlight.min.js?1746416299"></script>
-    <script src="/js/highlight.pack.js?1746416299"></script>
+    <script src="/js/clipboard.min.js?1746416297"></script>
+    <script src="/js/perfect-scrollbar.min.js?1746416297"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1746416297"></script>
+    <script src="/js/jquery.sticky.js?1746416297"></script>
+    <script src="/js/featherlight.min.js?1746416297"></script>
+    <script src="/js/highlight.pack.js?1746416297"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1746416299"></script>
-    <script src="/js/learn.js?1746416299"></script>
-    <script src="/js/hugo-learn.js?1746416299"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1746416297"></script>
+    <script src="/js/learn.js?1746416297"></script>
+    <script src="/js/hugo-learn.js?1746416297"></script>
 
-    <link href="/mermaid/mermaid.css?1746416299" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1746416299"></script>
+    <link href="/mermaid/mermaid.css?1746416297" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1746416297"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
@@ -965,4 +1030,3 @@
 </script>
   </body>
 </html>
-

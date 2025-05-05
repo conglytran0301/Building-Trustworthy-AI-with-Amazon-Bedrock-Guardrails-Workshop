@@ -8,7 +8,7 @@ pre = "<b>6. </b>"
 
 Let us now test our created Guardrail to see how well it is working and if it is meeting Stellar Bank’s requirements:
 
-Click on **Bedrock → Guardrails** and choose the Guardrail we created
+Click on **Bedrock → Guardrails** and choose the Guardrail created
 ![img](/images/6/img.png?width=90pc)
 
 You will see a screen similar to the below
